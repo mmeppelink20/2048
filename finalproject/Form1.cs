@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LogicLayer;
 using DataObjects;
 
+
 namespace finalproject
 {
     public partial class Form1 : Form
@@ -23,86 +24,6 @@ namespace finalproject
         }
 
 
-        private void txtOneOne_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTwoOne_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOneFour_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOneThree_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFourThree_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtThreeFour_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTwoThree_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtThreeOne_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTwoFour_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtThreeTwo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFourFour_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTwoTwo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFourTwo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtThreeThree_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOneTwo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFourOne_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             ShiftLogic shiftLogic = new ShiftLogic();
@@ -115,38 +36,38 @@ namespace finalproject
             // 1, 1
             if (_gameBoard[0, 0] != 0)
             {
-                txtOneOne.Text = _gameBoard[0, 0].ToString();
+                lblOneOne.Text = _gameBoard[0, 0].ToString();
             }
             else
             {
-                txtOneOne.Text = "";
+                lblOneOne.Text = "";
             }
             // 1, 2
             if (_gameBoard[0, 1] != 0)
             {
-                txtOneTwo.Text = _gameBoard[0, 1].ToString();
+                lblOneTwo.Text = _gameBoard[0, 1].ToString();
             }
             else
             {
-                txtOneTwo.Text = "";
+                lblOneTwo.Text = "";
             }
             // 1, 3
             if (_gameBoard[0, 2] != 0)
             {
-                txtOneThree.Text = _gameBoard[0, 2].ToString();
+                lblOneThree.Text = _gameBoard[0, 2].ToString();
             }
             else
             {
-                txtOneThree.Text = "";
+                lblOneThree.Text = "";
             }
             // 1, 4
             if (_gameBoard[0, 3] != 0)
             {
-                txtOneFour.Text = _gameBoard[0, 3].ToString();
+                lblOneFour.Text = _gameBoard[0, 3].ToString();
             }
             else
             {
-                txtOneFour.Text = "";
+                lblOneFour.Text = "";
             }
 
 
@@ -154,116 +75,140 @@ namespace finalproject
             // 2, 1
             if (_gameBoard[1, 0] != 0)
             {
-                txtTwoOne.Text = _gameBoard[1, 0].ToString();
+                lblTwoOne.Text = _gameBoard[1, 0].ToString();
             }
             else
             {
-                txtTwoOne.Text = "";
+                lblTwoOne.Text = "";
             }
             // 2, 2
             if (_gameBoard[1, 1] != 0)
             {
-                txtTwoTwo.Text = _gameBoard[1, 1].ToString();
+                lblTwoTwo.Text = _gameBoard[1, 1].ToString();
             }
             else
             {
-                txtTwoTwo.Text = "";
+                lblTwoTwo.Text = "";
             }
             // 2, 3
             if (_gameBoard[1, 2] != 0)
             {
-                txtTwoThree.Text = _gameBoard[1, 2].ToString();
+                lblTwoThree.Text = _gameBoard[1, 2].ToString();
             }
             else
             {
-                txtTwoThree.Text = "";
+                lblTwoThree.Text = "";
             }
             // 2, 4
             if (_gameBoard[1, 3] != 0)
             {
-                txtTwoFour.Text = _gameBoard[1, 3].ToString();
+                lblTwoFour.Text = _gameBoard[1, 3].ToString();
             }
             else
             {
-                txtTwoFour.Text = "";
+                lblTwoFour.Text = "";
             }
 
 
             // 3, 1
             if (_gameBoard[2, 0] != 0)
             {
-                txtThreeOne.Text = _gameBoard[2, 0].ToString();
+                lblThreeOne.Text = _gameBoard[2, 0].ToString();
             }
             else
             {
-                txtThreeOne.Text = "";
+                lblThreeOne.Text = "";
             }
             // 3, 2
             if (_gameBoard[2, 1] != 0)
             {
-                txtThreeTwo.Text = _gameBoard[2, 1].ToString();
+                lblThreeTwo.Text = _gameBoard[2, 1].ToString();
             }
             else
             {
-                txtThreeTwo.Text = "";
+                lblThreeTwo.Text = "";
             }
             // 3, 3
             if (_gameBoard[2, 2] != 0)
             {
-                txtThreeThree.Text = _gameBoard[2, 2].ToString();
+                lblThreeThree.Text = _gameBoard[2, 2].ToString();
             }
             else
             {
-                txtThreeThree.Text = "";
+                lblThreeThree.Text = "";
             }
             // 3, 4
             if (_gameBoard[2, 3] != 0)
             {
-                txtThreeFour.Text = _gameBoard[2, 3].ToString();
+                lblThreeFour.Text = _gameBoard[2, 3].ToString();
             }
             else
             {
-                txtThreeFour.Text = "";
+                lblThreeFour.Text = "";
             }
 
 
             // 4, 1
             if (_gameBoard[3, 0] != 0)
             {
-                txtFourOne.Text = _gameBoard[3, 0].ToString();
+                lblFourOne.Text = _gameBoard[3, 0].ToString();
             }
             else
             {
-                txtFourOne.Text = "";
+                lblFourOne.Text = "";
             }
             // 4, 2
             if (_gameBoard[3, 1] != 0)
             {
-                txtFourTwo.Text = _gameBoard[3, 1].ToString();
+                lblFourTwo.Text = _gameBoard[3, 1].ToString();
             }
             else
             {
-                txtFourTwo.Text = "";
+                lblFourTwo.Text = "";
             }
             // 4, 3
             if (_gameBoard[3, 2] != 0)
             {
-                txtFourThree.Text = _gameBoard[3, 2].ToString();
+                lblFourThree.Text = _gameBoard[3, 2].ToString();
             }
             else
             {
-                txtFourThree.Text = "";
+                lblFourThree.Text = "";
             }
             // 4, 4
             if (_gameBoard[3, 3] != 0)
             {
-                txtFourFour.Text = _gameBoard[3, 3].ToString();
+                lblFourFour.Text = _gameBoard[3, 3].ToString();
             }
             else
             {
-                txtFourFour.Text = "";
+                lblFourFour.Text = "";
             }
 
         }
+
+
+        private void btnShiftRight_Click(object sender, EventArgs e)
+        {
+            ShiftLogic shiftLogic = new ShiftLogic();
+            shiftLogic.ShiftBoardRight(_gameBoard);
+        }
+
+        private void btnShiftUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShiftLeft_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShiftDown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

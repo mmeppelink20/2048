@@ -21,7 +21,6 @@ namespace LogicLayer
                             {0, 0, 0, 0 },
                             };
 
-
             _newNumber(gameBoard, 2);
 
             return gameBoard;
@@ -31,49 +30,45 @@ namespace LogicLayer
         private void _newNumber(int[,] gameBoard, int count)
         {
             Random rand = new Random();
-
-            int x1 = rand.Next(0, 4);
-            int y1 = rand.Next(0, 4);
-
-
-            int x2 = rand.Next(0, 4);
-            int y2 = rand.Next(0, 4);
-
-            if (x2 == x1)
+            for (int i = 0; i < count; i++)
             {
-                x2 = rand.Next(0, 4);
-            }
-            if (y2 == y1)
-            {
-                y2 = rand.Next(0, 4);
-            }
+                int x1 = rand.Next(0, 4);
+                int y1 = rand.Next(0, 4);
 
-            int value1 = rand.Next(0, 16);
-            int value2 = rand.Next(0, 16);
+                int value1 = rand.Next(0, 16);
 
-            if (value1 <= 10)
-            {
-                value1 = 2;
-            }
-            else
-            {
-                value1 = 4;
-            }
+                if (value1 <= 10)
+                {
+                    value1 = 2;
+                }
+                else
+                {
+                    value1 = 4;
+                }
 
-            if (value2 <= 10)
-            {
-                value2 = 2;
+                while (true)
+                {
+                    if (gameBoard[x1, y1] == 0)
+                    {
+                        gameBoard[x1, y1] = value1;
+                        break;
+                    }
+                    else
+                    {
+                        x1 = rand.Next(0, 4);
+                        y1 = rand.Next(0, 4);
+                    }
+                }
             }
-            else
-            {
-                value2 = 4;
-            }
-
-            gameBoard[x1, y1] = value1;
-            gameBoard[x2, y2] = value2;
-
 
         }
 
+        public int[,] ShiftBoardRight(int[,] gameBoard)
+        {
+
+
+
+            return gameBoard;
+        }
     }
 }

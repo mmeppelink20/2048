@@ -1,0 +1,33 @@
+C:\finalproject\LogicLayer\bin\Debug\LogicLayer.dll
+C:\finalproject\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\finalproject\LogicLayer\bin\Debug\DataAccessLayer.dll
+C:\finalproject\LogicLayer\bin\Debug\DataObjects.dll
+C:\finalproject\LogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\finalproject\LogicLayer\bin\Debug\DataObjects.pdb
+C:\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.AssemblyReference.cache
+C:\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
+C:\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+C:\finalproject\LogicLayer\obj\Debug\LogicLayer.dll
+C:\finalproject\LogicLayer\obj\Debug\LogicLayer.pdb
+J:\School\Visual Studio\finalproject\LogicLayer\bin\Debug\LogicLayer.dll
+J:\School\Visual Studio\finalproject\LogicLayer\bin\Debug\LogicLayer.pdb
+J:\School\Visual Studio\finalproject\LogicLayer\bin\Debug\DataAccessLayer.dll
+J:\School\Visual Studio\finalproject\LogicLayer\bin\Debug\DataObjects.dll
+J:\School\Visual Studio\finalproject\LogicLayer\bin\Debug\DataAccessLayer.pdb
+J:\School\Visual Studio\finalproject\LogicLayer\bin\Debug\DataObjects.pdb
+J:\School\Visual Studio\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.AssemblyReference.cache
+J:\School\Visual Studio\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
+J:\School\Visual Studio\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+J:\School\Visual Studio\finalproject\LogicLayer\obj\Debug\LogicLayer.dll
+J:\School\Visual Studio\finalproject\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\matth\Desktop\finalproject\LogicLayer\bin\Debug\LogicLayer.dll
+C:\Users\matth\Desktop\finalproject\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\Users\matth\Desktop\finalproject\LogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\matth\Desktop\finalproject\LogicLayer\bin\Debug\DataObjects.dll
+C:\Users\matth\Desktop\finalproject\LogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\matth\Desktop\finalproject\LogicLayer\bin\Debug\DataObjects.pdb
+C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.AssemblyReference.cache
+C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.dll
+C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.pdb

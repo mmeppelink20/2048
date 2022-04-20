@@ -29,241 +29,43 @@ namespace finalproject
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtOneOne = new System.Windows.Forms.TextBox();
-            this.txtOneTwo = new System.Windows.Forms.TextBox();
-            this.txtOneThree = new System.Windows.Forms.TextBox();
-            this.txtOneFour = new System.Windows.Forms.TextBox();
-            this.txtTwoFour = new System.Windows.Forms.TextBox();
-            this.txtTwoThree = new System.Windows.Forms.TextBox();
-            this.txtTwoTwo = new System.Windows.Forms.TextBox();
-            this.txtTwoOne = new System.Windows.Forms.TextBox();
-            this.txtThreeFour = new System.Windows.Forms.TextBox();
-            this.txtThreeThree = new System.Windows.Forms.TextBox();
-            this.txtThreeTwo = new System.Windows.Forms.TextBox();
-            this.txtThreeOne = new System.Windows.Forms.TextBox();
-            this.txtFourFour = new System.Windows.Forms.TextBox();
-            this.txtFourThree = new System.Windows.Forms.TextBox();
-            this.txtFourTwo = new System.Windows.Forms.TextBox();
-            this.txtFourOne = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnShiftRight = new System.Windows.Forms.Button();
+            this.btnShiftUp = new System.Windows.Forms.Button();
+            this.btnShiftDown = new System.Windows.Forms.Button();
+            this.btnShiftLeft = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblOneOne = new System.Windows.Forms.Label();
+            this.lblOneTwo = new System.Windows.Forms.Label();
+            this.lblOneThree = new System.Windows.Forms.Label();
+            this.lblOneFour = new System.Windows.Forms.Label();
+            this.lblTwoFour = new System.Windows.Forms.Label();
+            this.lblTwoThree = new System.Windows.Forms.Label();
+            this.lblTwoOne = new System.Windows.Forms.Label();
+            this.lblTwoTwo = new System.Windows.Forms.Label();
+            this.lblFourFour = new System.Windows.Forms.Label();
+            this.lblFourThree = new System.Windows.Forms.Label();
+            this.lblFourTwo = new System.Windows.Forms.Label();
+            this.lblFourOne = new System.Windows.Forms.Label();
+            this.lblThreeFour = new System.Windows.Forms.Label();
+            this.lblThreeTwo = new System.Windows.Forms.Label();
+            this.lblThreeThree = new System.Windows.Forms.Label();
+            this.lblThreeOne = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtOneOne
-            // 
-            this.txtOneOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOneOne.Location = new System.Drawing.Point(71, 181);
-            this.txtOneOne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtOneOne.Multiline = true;
-            this.txtOneOne.Name = "txtOneOne";
-            this.txtOneOne.ReadOnly = true;
-            this.txtOneOne.Size = new System.Drawing.Size(165, 147);
-            this.txtOneOne.TabIndex = 0;
-            this.txtOneOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtOneOne.TextChanged += new System.EventHandler(this.txtOneOne_TextChanged);
-            // 
-            // txtOneTwo
-            // 
-            this.txtOneTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOneTwo.Location = new System.Drawing.Point(291, 181);
-            this.txtOneTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtOneTwo.Multiline = true;
-            this.txtOneTwo.Name = "txtOneTwo";
-            this.txtOneTwo.ReadOnly = true;
-            this.txtOneTwo.Size = new System.Drawing.Size(165, 147);
-            this.txtOneTwo.TabIndex = 1;
-            this.txtOneTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtOneTwo.TextChanged += new System.EventHandler(this.txtOneTwo_TextChanged);
-            // 
-            // txtOneThree
-            // 
-            this.txtOneThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOneThree.Location = new System.Drawing.Point(511, 181);
-            this.txtOneThree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtOneThree.Multiline = true;
-            this.txtOneThree.Name = "txtOneThree";
-            this.txtOneThree.ReadOnly = true;
-            this.txtOneThree.Size = new System.Drawing.Size(165, 147);
-            this.txtOneThree.TabIndex = 2;
-            this.txtOneThree.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtOneThree.TextChanged += new System.EventHandler(this.txtOneThree_TextChanged);
-            // 
-            // txtOneFour
-            // 
-            this.txtOneFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOneFour.Location = new System.Drawing.Point(731, 181);
-            this.txtOneFour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtOneFour.Multiline = true;
-            this.txtOneFour.Name = "txtOneFour";
-            this.txtOneFour.ReadOnly = true;
-            this.txtOneFour.Size = new System.Drawing.Size(165, 147);
-            this.txtOneFour.TabIndex = 3;
-            this.txtOneFour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtOneFour.TextChanged += new System.EventHandler(this.txtOneFour_TextChanged);
-            // 
-            // txtTwoFour
-            // 
-            this.txtTwoFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTwoFour.Location = new System.Drawing.Point(731, 390);
-            this.txtTwoFour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTwoFour.Multiline = true;
-            this.txtTwoFour.Name = "txtTwoFour";
-            this.txtTwoFour.ReadOnly = true;
-            this.txtTwoFour.Size = new System.Drawing.Size(165, 147);
-            this.txtTwoFour.TabIndex = 7;
-            this.txtTwoFour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTwoFour.TextChanged += new System.EventHandler(this.txtTwoFour_TextChanged);
-            // 
-            // txtTwoThree
-            // 
-            this.txtTwoThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTwoThree.Location = new System.Drawing.Point(511, 390);
-            this.txtTwoThree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTwoThree.Multiline = true;
-            this.txtTwoThree.Name = "txtTwoThree";
-            this.txtTwoThree.ReadOnly = true;
-            this.txtTwoThree.Size = new System.Drawing.Size(165, 147);
-            this.txtTwoThree.TabIndex = 6;
-            this.txtTwoThree.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTwoThree.TextChanged += new System.EventHandler(this.txtTwoThree_TextChanged);
-            // 
-            // txtTwoTwo
-            // 
-            this.txtTwoTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTwoTwo.Location = new System.Drawing.Point(291, 390);
-            this.txtTwoTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTwoTwo.Multiline = true;
-            this.txtTwoTwo.Name = "txtTwoTwo";
-            this.txtTwoTwo.ReadOnly = true;
-            this.txtTwoTwo.Size = new System.Drawing.Size(165, 147);
-            this.txtTwoTwo.TabIndex = 5;
-            this.txtTwoTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTwoTwo.TextChanged += new System.EventHandler(this.txtTwoTwo_TextChanged);
-            // 
-            // txtTwoOne
-            // 
-            this.txtTwoOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTwoOne.Location = new System.Drawing.Point(71, 390);
-            this.txtTwoOne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTwoOne.Multiline = true;
-            this.txtTwoOne.Name = "txtTwoOne";
-            this.txtTwoOne.ReadOnly = true;
-            this.txtTwoOne.Size = new System.Drawing.Size(165, 147);
-            this.txtTwoOne.TabIndex = 4;
-            this.txtTwoOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTwoOne.TextChanged += new System.EventHandler(this.txtTwoOne_TextChanged);
-            // 
-            // txtThreeFour
-            // 
-            this.txtThreeFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThreeFour.Location = new System.Drawing.Point(731, 594);
-            this.txtThreeFour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtThreeFour.Multiline = true;
-            this.txtThreeFour.Name = "txtThreeFour";
-            this.txtThreeFour.ReadOnly = true;
-            this.txtThreeFour.Size = new System.Drawing.Size(165, 147);
-            this.txtThreeFour.TabIndex = 11;
-            this.txtThreeFour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtThreeFour.TextChanged += new System.EventHandler(this.txtThreeFour_TextChanged);
-            // 
-            // txtThreeThree
-            // 
-            this.txtThreeThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThreeThree.Location = new System.Drawing.Point(511, 594);
-            this.txtThreeThree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtThreeThree.Multiline = true;
-            this.txtThreeThree.Name = "txtThreeThree";
-            this.txtThreeThree.ReadOnly = true;
-            this.txtThreeThree.Size = new System.Drawing.Size(165, 147);
-            this.txtThreeThree.TabIndex = 10;
-            this.txtThreeThree.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtThreeThree.TextChanged += new System.EventHandler(this.txtThreeThree_TextChanged);
-            // 
-            // txtThreeTwo
-            // 
-            this.txtThreeTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThreeTwo.Location = new System.Drawing.Point(291, 594);
-            this.txtThreeTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtThreeTwo.Multiline = true;
-            this.txtThreeTwo.Name = "txtThreeTwo";
-            this.txtThreeTwo.ReadOnly = true;
-            this.txtThreeTwo.Size = new System.Drawing.Size(165, 147);
-            this.txtThreeTwo.TabIndex = 9;
-            this.txtThreeTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtThreeTwo.TextChanged += new System.EventHandler(this.txtThreeTwo_TextChanged);
-            // 
-            // txtThreeOne
-            // 
-            this.txtThreeOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThreeOne.Location = new System.Drawing.Point(71, 594);
-            this.txtThreeOne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtThreeOne.Multiline = true;
-            this.txtThreeOne.Name = "txtThreeOne";
-            this.txtThreeOne.ReadOnly = true;
-            this.txtThreeOne.Size = new System.Drawing.Size(165, 147);
-            this.txtThreeOne.TabIndex = 8;
-            this.txtThreeOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtThreeOne.TextChanged += new System.EventHandler(this.txtThreeOne_TextChanged);
-            // 
-            // txtFourFour
-            // 
-            this.txtFourFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFourFour.Location = new System.Drawing.Point(731, 805);
-            this.txtFourFour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFourFour.Multiline = true;
-            this.txtFourFour.Name = "txtFourFour";
-            this.txtFourFour.ReadOnly = true;
-            this.txtFourFour.Size = new System.Drawing.Size(165, 147);
-            this.txtFourFour.TabIndex = 15;
-            this.txtFourFour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFourFour.TextChanged += new System.EventHandler(this.txtFourFour_TextChanged);
-            // 
-            // txtFourThree
-            // 
-            this.txtFourThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFourThree.Location = new System.Drawing.Point(511, 805);
-            this.txtFourThree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFourThree.Multiline = true;
-            this.txtFourThree.Name = "txtFourThree";
-            this.txtFourThree.ReadOnly = true;
-            this.txtFourThree.Size = new System.Drawing.Size(165, 147);
-            this.txtFourThree.TabIndex = 14;
-            this.txtFourThree.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFourThree.TextChanged += new System.EventHandler(this.txtFourThree_TextChanged);
-            // 
-            // txtFourTwo
-            // 
-            this.txtFourTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFourTwo.Location = new System.Drawing.Point(291, 805);
-            this.txtFourTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFourTwo.Multiline = true;
-            this.txtFourTwo.Name = "txtFourTwo";
-            this.txtFourTwo.ReadOnly = true;
-            this.txtFourTwo.Size = new System.Drawing.Size(165, 147);
-            this.txtFourTwo.TabIndex = 13;
-            this.txtFourTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFourTwo.TextChanged += new System.EventHandler(this.txtFourTwo_TextChanged);
-            // 
-            // txtFourOne
-            // 
-            this.txtFourOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFourOne.Location = new System.Drawing.Point(71, 805);
-            this.txtFourOne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFourOne.Multiline = true;
-            this.txtFourOne.Name = "txtFourOne";
-            this.txtFourOne.ReadOnly = true;
-            this.txtFourOne.Size = new System.Drawing.Size(165, 147);
-            this.txtFourOne.TabIndex = 12;
-            this.txtFourOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFourOne.TextChanged += new System.EventHandler(this.txtFourOne_TextChanged);
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(744, 79);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox17.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox17.Location = new System.Drawing.Point(754, 55);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(132, 38);
@@ -271,8 +73,9 @@ namespace finalproject
             // 
             // lblScore
             // 
+            this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblScore.AutoSize = true;
-            this.lblScore.Location = new System.Drawing.Point(784, 59);
+            this.lblScore.Location = new System.Drawing.Point(798, 34);
             this.lblScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(45, 17);
@@ -281,8 +84,9 @@ namespace finalproject
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(89, 79);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox18.Location = new System.Drawing.Point(99, 55);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(132, 38);
@@ -290,8 +94,9 @@ namespace finalproject
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 59);
+            this.label1.Location = new System.Drawing.Point(125, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 17);
@@ -300,9 +105,10 @@ namespace finalproject
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(16, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(22, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 41);
             this.button1.TabIndex = 20;
@@ -310,64 +116,340 @@ namespace finalproject
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Form1_Load);
             // 
+            // btnShiftRight
+            // 
+            this.btnShiftRight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShiftRight.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnShiftRight.Location = new System.Drawing.Point(935, 406);
+            this.btnShiftRight.Name = "btnShiftRight";
+            this.btnShiftRight.Size = new System.Drawing.Size(35, 360);
+            this.btnShiftRight.TabIndex = 22;
+            this.btnShiftRight.Text = "→";
+            this.btnShiftRight.UseVisualStyleBackColor = false;
+            this.btnShiftRight.Click += new System.EventHandler(this.btnShiftRight_Click);
+            // 
+            // btnShiftUp
+            // 
+            this.btnShiftUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShiftUp.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnShiftUp.Location = new System.Drawing.Point(319, 123);
+            this.btnShiftUp.Name = "btnShiftUp";
+            this.btnShiftUp.Size = new System.Drawing.Size(360, 35);
+            this.btnShiftUp.TabIndex = 24;
+            this.btnShiftUp.Text = "↑";
+            this.btnShiftUp.UseVisualStyleBackColor = false;
+            this.btnShiftUp.Click += new System.EventHandler(this.btnShiftUp_Click);
+            // 
+            // btnShiftDown
+            // 
+            this.btnShiftDown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShiftDown.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnShiftDown.Location = new System.Drawing.Point(320, 1035);
+            this.btnShiftDown.Name = "btnShiftDown";
+            this.btnShiftDown.Size = new System.Drawing.Size(360, 35);
+            this.btnShiftDown.TabIndex = 25;
+            this.btnShiftDown.Text = "↓";
+            this.btnShiftDown.UseVisualStyleBackColor = false;
+            this.btnShiftDown.Click += new System.EventHandler(this.btnShiftDown_Click);
+            // 
+            // btnShiftLeft
+            // 
+            this.btnShiftLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShiftLeft.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnShiftLeft.Location = new System.Drawing.Point(22, 406);
+            this.btnShiftLeft.Name = "btnShiftLeft";
+            this.btnShiftLeft.Size = new System.Drawing.Size(35, 360);
+            this.btnShiftLeft.TabIndex = 26;
+            this.btnShiftLeft.Text = "←";
+            this.btnShiftLeft.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(882, 887);
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Goldenrod;
+            this.pictureBox2.Location = new System.Drawing.Point(0, -6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(994, 1162);
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblOneOne
+            // 
+            this.lblOneOne.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOneOne.BackColor = System.Drawing.Color.Silver;
+            this.lblOneOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneOne.Location = new System.Drawing.Point(80, 174);
+            this.lblOneOne.Margin = new System.Windows.Forms.Padding(4);
+            this.lblOneOne.Name = "lblOneOne";
+            this.lblOneOne.Size = new System.Drawing.Size(190, 190);
+            this.lblOneOne.TabIndex = 29;
+            this.lblOneOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOneTwo
+            // 
+            this.lblOneTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOneTwo.BackColor = System.Drawing.Color.Silver;
+            this.lblOneTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneTwo.Location = new System.Drawing.Point(296, 174);
+            this.lblOneTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.lblOneTwo.Name = "lblOneTwo";
+            this.lblOneTwo.Size = new System.Drawing.Size(190, 190);
+            this.lblOneTwo.TabIndex = 30;
+            this.lblOneTwo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOneThree
+            // 
+            this.lblOneThree.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOneThree.BackColor = System.Drawing.Color.Silver;
+            this.lblOneThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneThree.Location = new System.Drawing.Point(511, 174);
+            this.lblOneThree.Margin = new System.Windows.Forms.Padding(4);
+            this.lblOneThree.Name = "lblOneThree";
+            this.lblOneThree.Size = new System.Drawing.Size(190, 190);
+            this.lblOneThree.TabIndex = 31;
+            this.lblOneThree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblOneFour
+            // 
+            this.lblOneFour.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOneFour.BackColor = System.Drawing.Color.Silver;
+            this.lblOneFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneFour.Location = new System.Drawing.Point(722, 174);
+            this.lblOneFour.Margin = new System.Windows.Forms.Padding(4);
+            this.lblOneFour.Name = "lblOneFour";
+            this.lblOneFour.Size = new System.Drawing.Size(190, 190);
+            this.lblOneFour.TabIndex = 32;
+            this.lblOneFour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTwoFour
+            // 
+            this.lblTwoFour.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTwoFour.BackColor = System.Drawing.Color.Silver;
+            this.lblTwoFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoFour.Location = new System.Drawing.Point(722, 389);
+            this.lblTwoFour.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTwoFour.Name = "lblTwoFour";
+            this.lblTwoFour.Size = new System.Drawing.Size(190, 190);
+            this.lblTwoFour.TabIndex = 36;
+            this.lblTwoFour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTwoThree
+            // 
+            this.lblTwoThree.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTwoThree.BackColor = System.Drawing.Color.Silver;
+            this.lblTwoThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoThree.Location = new System.Drawing.Point(511, 389);
+            this.lblTwoThree.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTwoThree.Name = "lblTwoThree";
+            this.lblTwoThree.Size = new System.Drawing.Size(190, 190);
+            this.lblTwoThree.TabIndex = 35;
+            this.lblTwoThree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTwoOne
+            // 
+            this.lblTwoOne.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTwoOne.BackColor = System.Drawing.Color.Silver;
+            this.lblTwoOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoOne.Location = new System.Drawing.Point(80, 389);
+            this.lblTwoOne.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTwoOne.Name = "lblTwoOne";
+            this.lblTwoOne.Size = new System.Drawing.Size(190, 190);
+            this.lblTwoOne.TabIndex = 33;
+            this.lblTwoOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTwoTwo
+            // 
+            this.lblTwoTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTwoTwo.BackColor = System.Drawing.Color.Silver;
+            this.lblTwoTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoTwo.Location = new System.Drawing.Point(296, 389);
+            this.lblTwoTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTwoTwo.Name = "lblTwoTwo";
+            this.lblTwoTwo.Size = new System.Drawing.Size(190, 190);
+            this.lblTwoTwo.TabIndex = 34;
+            this.lblTwoTwo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFourFour
+            // 
+            this.lblFourFour.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFourFour.BackColor = System.Drawing.Color.Silver;
+            this.lblFourFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourFour.Location = new System.Drawing.Point(722, 819);
+            this.lblFourFour.Margin = new System.Windows.Forms.Padding(4);
+            this.lblFourFour.Name = "lblFourFour";
+            this.lblFourFour.Size = new System.Drawing.Size(190, 190);
+            this.lblFourFour.TabIndex = 44;
+            this.lblFourFour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFourThree
+            // 
+            this.lblFourThree.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFourThree.BackColor = System.Drawing.Color.Silver;
+            this.lblFourThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourThree.Location = new System.Drawing.Point(511, 819);
+            this.lblFourThree.Margin = new System.Windows.Forms.Padding(4);
+            this.lblFourThree.Name = "lblFourThree";
+            this.lblFourThree.Size = new System.Drawing.Size(190, 190);
+            this.lblFourThree.TabIndex = 43;
+            this.lblFourThree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFourTwo
+            // 
+            this.lblFourTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFourTwo.BackColor = System.Drawing.Color.Silver;
+            this.lblFourTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourTwo.Location = new System.Drawing.Point(296, 819);
+            this.lblFourTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.lblFourTwo.Name = "lblFourTwo";
+            this.lblFourTwo.Size = new System.Drawing.Size(190, 190);
+            this.lblFourTwo.TabIndex = 42;
+            this.lblFourTwo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFourOne
+            // 
+            this.lblFourOne.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFourOne.BackColor = System.Drawing.Color.Silver;
+            this.lblFourOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourOne.Location = new System.Drawing.Point(80, 819);
+            this.lblFourOne.Margin = new System.Windows.Forms.Padding(4);
+            this.lblFourOne.Name = "lblFourOne";
+            this.lblFourOne.Size = new System.Drawing.Size(190, 190);
+            this.lblFourOne.TabIndex = 41;
+            this.lblFourOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblThreeFour
+            // 
+            this.lblThreeFour.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblThreeFour.BackColor = System.Drawing.Color.Silver;
+            this.lblThreeFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeFour.Location = new System.Drawing.Point(722, 604);
+            this.lblThreeFour.Margin = new System.Windows.Forms.Padding(4);
+            this.lblThreeFour.Name = "lblThreeFour";
+            this.lblThreeFour.Size = new System.Drawing.Size(190, 190);
+            this.lblThreeFour.TabIndex = 40;
+            this.lblThreeFour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblThreeTwo
+            // 
+            this.lblThreeTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblThreeTwo.BackColor = System.Drawing.Color.Silver;
+            this.lblThreeTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeTwo.Location = new System.Drawing.Point(296, 604);
+            this.lblThreeTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.lblThreeTwo.Name = "lblThreeTwo";
+            this.lblThreeTwo.Size = new System.Drawing.Size(190, 190);
+            this.lblThreeTwo.TabIndex = 38;
+            this.lblThreeTwo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblThreeThree
+            // 
+            this.lblThreeThree.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblThreeThree.BackColor = System.Drawing.Color.Silver;
+            this.lblThreeThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeThree.Location = new System.Drawing.Point(511, 604);
+            this.lblThreeThree.Margin = new System.Windows.Forms.Padding(4);
+            this.lblThreeThree.Name = "lblThreeThree";
+            this.lblThreeThree.Size = new System.Drawing.Size(190, 190);
+            this.lblThreeThree.TabIndex = 39;
+            this.lblThreeThree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblThreeOne
+            // 
+            this.lblThreeOne.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblThreeOne.BackColor = System.Drawing.Color.Silver;
+            this.lblThreeOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeOne.Location = new System.Drawing.Point(80, 604);
+            this.lblThreeOne.Margin = new System.Windows.Forms.Padding(4);
+            this.lblThreeOne.Name = "lblThreeOne";
+            this.lblThreeOne.Size = new System.Drawing.Size(190, 190);
+            this.lblThreeOne.TabIndex = 37;
+            this.lblThreeOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 1004);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(991, 1153);
+            this.Controls.Add(this.lblFourFour);
+            this.Controls.Add(this.lblFourThree);
+            this.Controls.Add(this.lblFourTwo);
+            this.Controls.Add(this.lblFourOne);
+            this.Controls.Add(this.lblThreeFour);
+            this.Controls.Add(this.lblThreeTwo);
+            this.Controls.Add(this.lblThreeThree);
+            this.Controls.Add(this.lblThreeOne);
+            this.Controls.Add(this.lblTwoFour);
+            this.Controls.Add(this.lblTwoThree);
+            this.Controls.Add(this.lblTwoTwo);
+            this.Controls.Add(this.lblTwoOne);
+            this.Controls.Add(this.lblOneFour);
+            this.Controls.Add(this.lblOneThree);
+            this.Controls.Add(this.lblOneTwo);
+            this.Controls.Add(this.lblOneOne);
+            this.Controls.Add(this.btnShiftLeft);
+            this.Controls.Add(this.btnShiftDown);
+            this.Controls.Add(this.btnShiftUp);
+            this.Controls.Add(this.btnShiftRight);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.txtFourFour);
-            this.Controls.Add(this.txtFourThree);
-            this.Controls.Add(this.txtFourTwo);
-            this.Controls.Add(this.txtFourOne);
-            this.Controls.Add(this.txtThreeFour);
-            this.Controls.Add(this.txtThreeThree);
-            this.Controls.Add(this.txtThreeTwo);
-            this.Controls.Add(this.txtThreeOne);
-            this.Controls.Add(this.txtTwoFour);
-            this.Controls.Add(this.txtTwoThree);
-            this.Controls.Add(this.txtTwoTwo);
-            this.Controls.Add(this.txtTwoOne);
-            this.Controls.Add(this.txtOneFour);
-            this.Controls.Add(this.txtOneThree);
-            this.Controls.Add(this.txtOneTwo);
-            this.Controls.Add(this.txtOneOne);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtOneOne;
-        private System.Windows.Forms.TextBox txtOneTwo;
-        private System.Windows.Forms.TextBox txtOneThree;
-        private System.Windows.Forms.TextBox txtOneFour;
-        private System.Windows.Forms.TextBox txtTwoFour;
-        private System.Windows.Forms.TextBox txtTwoThree;
-        private System.Windows.Forms.TextBox txtTwoTwo;
-        private System.Windows.Forms.TextBox txtTwoOne;
-        private System.Windows.Forms.TextBox txtThreeFour;
-        private System.Windows.Forms.TextBox txtThreeThree;
-        private System.Windows.Forms.TextBox txtThreeTwo;
-        private System.Windows.Forms.TextBox txtThreeOne;
-        private System.Windows.Forms.TextBox txtFourFour;
-        private System.Windows.Forms.TextBox txtFourThree;
-        private System.Windows.Forms.TextBox txtFourTwo;
-        private System.Windows.Forms.TextBox txtFourOne;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnShiftRight;
+        private System.Windows.Forms.Button btnShiftUp;
+        private System.Windows.Forms.Button btnShiftDown;
+        private System.Windows.Forms.Button btnShiftLeft;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblOneOne;
+        private System.Windows.Forms.Label lblOneTwo;
+        private System.Windows.Forms.Label lblOneThree;
+        private System.Windows.Forms.Label lblOneFour;
+        private System.Windows.Forms.Label lblTwoFour;
+        private System.Windows.Forms.Label lblTwoThree;
+        private System.Windows.Forms.Label lblTwoOne;
+        private System.Windows.Forms.Label lblTwoTwo;
+        private System.Windows.Forms.Label lblFourFour;
+        private System.Windows.Forms.Label lblFourThree;
+        private System.Windows.Forms.Label lblFourTwo;
+        private System.Windows.Forms.Label lblFourOne;
+        private System.Windows.Forms.Label lblThreeFour;
+        private System.Windows.Forms.Label lblThreeTwo;
+        private System.Windows.Forms.Label lblThreeThree;
+        private System.Windows.Forms.Label lblThreeOne;
     }
 }
 
