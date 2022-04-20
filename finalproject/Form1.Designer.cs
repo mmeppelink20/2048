@@ -166,7 +166,7 @@ namespace finalproject
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
             this.pictureBox1.Location = new System.Drawing.Point(56, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(882, 887);
@@ -176,7 +176,7 @@ namespace finalproject
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Goldenrod;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
             this.pictureBox2.Location = new System.Drawing.Point(0, -6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(994, 1162);
@@ -186,8 +186,8 @@ namespace finalproject
             // lblOneOne
             // 
             this.lblOneOne.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblOneOne.BackColor = System.Drawing.Color.Silver;
-            this.lblOneOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblOneOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneOne.Location = new System.Drawing.Point(80, 174);
             this.lblOneOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneOne.Name = "lblOneOne";
@@ -198,8 +198,8 @@ namespace finalproject
             // lblOneTwo
             // 
             this.lblOneTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblOneTwo.BackColor = System.Drawing.Color.Silver;
-            this.lblOneTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblOneTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneTwo.Location = new System.Drawing.Point(296, 174);
             this.lblOneTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneTwo.Name = "lblOneTwo";
@@ -210,8 +210,8 @@ namespace finalproject
             // lblOneThree
             // 
             this.lblOneThree.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblOneThree.BackColor = System.Drawing.Color.Silver;
-            this.lblOneThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblOneThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneThree.Location = new System.Drawing.Point(511, 174);
             this.lblOneThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneThree.Name = "lblOneThree";
@@ -222,8 +222,8 @@ namespace finalproject
             // lblOneFour
             // 
             this.lblOneFour.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblOneFour.BackColor = System.Drawing.Color.Silver;
-            this.lblOneFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblOneFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneFour.Location = new System.Drawing.Point(722, 174);
             this.lblOneFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneFour.Name = "lblOneFour";
@@ -234,8 +234,8 @@ namespace finalproject
             // lblTwoFour
             // 
             this.lblTwoFour.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTwoFour.BackColor = System.Drawing.Color.Silver;
-            this.lblTwoFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblTwoFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoFour.Location = new System.Drawing.Point(722, 389);
             this.lblTwoFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoFour.Name = "lblTwoFour";
@@ -246,8 +246,8 @@ namespace finalproject
             // lblTwoThree
             // 
             this.lblTwoThree.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTwoThree.BackColor = System.Drawing.Color.Silver;
-            this.lblTwoThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblTwoThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoThree.Location = new System.Drawing.Point(511, 389);
             this.lblTwoThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoThree.Name = "lblTwoThree";
@@ -258,8 +258,8 @@ namespace finalproject
             // lblTwoOne
             // 
             this.lblTwoOne.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTwoOne.BackColor = System.Drawing.Color.Silver;
-            this.lblTwoOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblTwoOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoOne.Location = new System.Drawing.Point(80, 389);
             this.lblTwoOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoOne.Name = "lblTwoOne";
@@ -270,8 +270,8 @@ namespace finalproject
             // lblTwoTwo
             // 
             this.lblTwoTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTwoTwo.BackColor = System.Drawing.Color.Silver;
-            this.lblTwoTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblTwoTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoTwo.Location = new System.Drawing.Point(296, 389);
             this.lblTwoTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoTwo.Name = "lblTwoTwo";
@@ -282,8 +282,8 @@ namespace finalproject
             // lblFourFour
             // 
             this.lblFourFour.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFourFour.BackColor = System.Drawing.Color.Silver;
-            this.lblFourFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblFourFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourFour.Location = new System.Drawing.Point(722, 819);
             this.lblFourFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourFour.Name = "lblFourFour";
@@ -294,8 +294,8 @@ namespace finalproject
             // lblFourThree
             // 
             this.lblFourThree.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFourThree.BackColor = System.Drawing.Color.Silver;
-            this.lblFourThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblFourThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourThree.Location = new System.Drawing.Point(511, 819);
             this.lblFourThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourThree.Name = "lblFourThree";
@@ -306,8 +306,8 @@ namespace finalproject
             // lblFourTwo
             // 
             this.lblFourTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFourTwo.BackColor = System.Drawing.Color.Silver;
-            this.lblFourTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblFourTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourTwo.Location = new System.Drawing.Point(296, 819);
             this.lblFourTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourTwo.Name = "lblFourTwo";
@@ -318,8 +318,8 @@ namespace finalproject
             // lblFourOne
             // 
             this.lblFourOne.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFourOne.BackColor = System.Drawing.Color.Silver;
-            this.lblFourOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblFourOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourOne.Location = new System.Drawing.Point(80, 819);
             this.lblFourOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourOne.Name = "lblFourOne";
@@ -330,8 +330,8 @@ namespace finalproject
             // lblThreeFour
             // 
             this.lblThreeFour.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblThreeFour.BackColor = System.Drawing.Color.Silver;
-            this.lblThreeFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblThreeFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeFour.Location = new System.Drawing.Point(722, 604);
             this.lblThreeFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeFour.Name = "lblThreeFour";
@@ -342,8 +342,8 @@ namespace finalproject
             // lblThreeTwo
             // 
             this.lblThreeTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblThreeTwo.BackColor = System.Drawing.Color.Silver;
-            this.lblThreeTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblThreeTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeTwo.Location = new System.Drawing.Point(296, 604);
             this.lblThreeTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeTwo.Name = "lblThreeTwo";
@@ -354,8 +354,8 @@ namespace finalproject
             // lblThreeThree
             // 
             this.lblThreeThree.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblThreeThree.BackColor = System.Drawing.Color.Silver;
-            this.lblThreeThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblThreeThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeThree.Location = new System.Drawing.Point(511, 604);
             this.lblThreeThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeThree.Name = "lblThreeThree";
@@ -366,8 +366,8 @@ namespace finalproject
             // lblThreeOne
             // 
             this.lblThreeOne.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblThreeOne.BackColor = System.Drawing.Color.Silver;
-            this.lblThreeOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblThreeOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeOne.Location = new System.Drawing.Point(80, 604);
             this.lblThreeOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeOne.Name = "lblThreeOne";

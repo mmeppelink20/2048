@@ -15,49 +15,48 @@ namespace LogicLayer
         {
             int[,] gameBoard = new int[4, 4]
                             {
-                            {0, 0, 0, 0 },
-                            {0, 0, 0, 0 },
-                            {0, 0, 0, 0 },
-                            {0, 0, 0, 0 },
+                            {0, 2, 4, 8 },
+                            {16, 32, 64, 128 },
+                            {256, 512, 1024, 2048 },
+                            {4096, 0, 0, 0 },
                             };
 
-            _newNumber(gameBoard, 2);
+            newNumber(gameBoard);
+            newNumber(gameBoard);
 
             return gameBoard;
 
         }
 
-        private void _newNumber(int[,] gameBoard, int count)
+        public void newNumber(int[,] gameBoard)
         {
             Random rand = new Random();
-            for (int i = 0; i < count; i++)
+
+            int x1 = rand.Next(0, 4);
+            int y1 = rand.Next(0, 4);
+
+            int value1 = rand.Next(0, 16);
+
+            if (value1 <= 10)
             {
-                int x1 = rand.Next(0, 4);
-                int y1 = rand.Next(0, 4);
+                value1 = 2;
+            }
+            else
+            {
+                value1 = 4;
+            }
 
-                int value1 = rand.Next(0, 16);
-
-                if (value1 <= 10)
+            while (true)
+            {
+                if (gameBoard[x1, y1] == 0)
                 {
-                    value1 = 2;
+                    gameBoard[x1, y1] = value1;
+                    break;
                 }
                 else
                 {
-                    value1 = 4;
-                }
-
-                while (true)
-                {
-                    if (gameBoard[x1, y1] == 0)
-                    {
-                        gameBoard[x1, y1] = value1;
-                        break;
-                    }
-                    else
-                    {
-                        x1 = rand.Next(0, 4);
-                        y1 = rand.Next(0, 4);
-                    }
+                    x1 = rand.Next(0, 4);
+                    y1 = rand.Next(0, 4);
                 }
             }
 
