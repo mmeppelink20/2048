@@ -1,5 +1,5 @@
 ﻿
-namespace finalproject
+namespace TwentyFoutyEight
 {
     partial class Form1
     {

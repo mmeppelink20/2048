@@ -36,10 +36,10 @@ C:\Users\matth\Desktop\finalproject\finalproject\bin\Debug\LogicLayer.dll
 C:\Users\matth\Desktop\finalproject\finalproject\bin\Debug\DataObjects.pdb
 C:\Users\matth\Desktop\finalproject\finalproject\bin\Debug\LogicLayer.pdb
 C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
-C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\finalproject.Form1.resources
 C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\finalproject.Properties.Resources.resources
 C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
 C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
 C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\finalproject.exe
 C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\finalproject.pdb
+C:\Users\matth\Desktop\finalproject\finalproject\obj\Debug\TwentyFoutyEight.Form1.resources
