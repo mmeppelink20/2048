@@ -54,6 +54,7 @@ namespace TwentyFoutyEight
             ShiftLogic shiftLogic = new ShiftLogic();
             _gameBoard = shiftLogic.CreateNewGameBoard();
             _updateBoard();
+            labelScore.Text = "0";
         }
 
         // Updates the color, font, and font color according to the value in _gameBoard[,].
@@ -347,67 +348,67 @@ namespace TwentyFoutyEight
                 case 0:
                     lblTwoOne.BackColor = _color0;
                     lblTwoOne.ForeColor = _textColorBlack;
-                    lblTwoTwo.Font = _fontTen;
+                    lblTwoOne.Font = _fontTen;
                     break;
                 case 2:
                     lblTwoOne.BackColor = _color2;
                     lblTwoOne.ForeColor = _textColorBlack;
-                    lblTwoTwo.Font = _fontTen;
+                    lblTwoOne.Font = _fontTen;
                     break;
                 case 4:
                     lblTwoOne.BackColor = _color4;
                     lblTwoOne.ForeColor = _textColorBlack;
-                    lblTwoTwo.Font = _fontTen;
+                    lblTwoOne.Font = _fontTen;
                     break;
                 case 8:
                     lblTwoOne.BackColor = _color8;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontTen;
+                    lblTwoOne.Font = _fontTen;
                     break;
                 case 16:
                     lblTwoOne.BackColor = _color16;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontTen;
+                    lblTwoOne.Font = _fontTen;
                     break;
                 case 32:
                     lblTwoOne.BackColor = _color32;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontTen;
+                    lblTwoOne.Font = _fontTen;
                     break;
                 case 64:
                     lblTwoOne.BackColor = _color64;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontTen;
+                    lblTwoOne.Font = _fontTen;
                     break;
                 case 128:
                     lblTwoOne.BackColor = _color128;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontHundred;
+                    lblTwoOne.Font = _fontHundred;
                     break;
                 case 256:
                     lblTwoOne.BackColor = _color256;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontHundred;
+                    lblTwoOne.Font = _fontHundred;
                     break;
                 case 512:
                     lblTwoOne.BackColor = _color512;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontHundred;
+                    lblTwoOne.Font = _fontHundred;
                     break;
                 case 1024:
                     lblTwoOne.BackColor = _color1024;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontThousand;
+                    lblTwoOne.Font = _fontThousand;
                     break;
                 case 2048:
                     lblTwoOne.BackColor = _color2048;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontThousand;
+                    lblTwoOne.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
                     lblTwoOne.BackColor = _color4096;
                     lblTwoOne.ForeColor = _textColorWhite;
-                    lblTwoTwo.Font = _fontThousand;
+                    lblTwoOne.Font = _fontThousand;
                     break;
             }
             // 2, 2
@@ -1192,6 +1193,7 @@ namespace TwentyFoutyEight
         // Updates the game board tiles to represent _gameBoard[,], A '0' is represented by an empty string.
         private void _updateBoard()
         {
+
             // 1, 1
             if (_gameBoard[0, 0] != 0)
             {
@@ -1346,21 +1348,35 @@ namespace TwentyFoutyEight
             _updateTileColor();
         }
 
+        private void _updateScore()
+        {
+            ShiftLogic shiftLogic = new ShiftLogic();
+            labelScore.Text = shiftLogic.Score.ToString();
+        }
+
 
         private void btnShiftRight_Click(object sender, EventArgs e)
         {
             ShiftLogic shiftLogic = new ShiftLogic();
             shiftLogic.ShiftBoardRight(_gameBoard);
+            _updateBoard();
+            _updateScore();
         }
 
         private void btnShiftUp_Click(object sender, EventArgs e)
         {
-
+            ShiftLogic shiftLogic = new ShiftLogic();
+            shiftLogic.ShiftBoardUp(_gameBoard);
+            _updateBoard();
+            _updateScore();
         }
 
         private void btnShiftLeft_Click(object sender, EventArgs e)
         {
-
+            ShiftLogic shiftLogic = new ShiftLogic();
+            shiftLogic.ShiftBoardLeft(_gameBoard);
+            _updateBoard();
+            _updateScore();
         }
 
         private void btnShiftDown_Click(object sender, EventArgs e)
@@ -1368,6 +1384,9 @@ namespace TwentyFoutyEight
 
         }
 
-
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            btnShiftLeft_Click(sender, e);
+        }
     }
 }

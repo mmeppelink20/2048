@@ -30,7 +30,6 @@ namespace TwentyFoutyEight
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textBox17 = new System.Windows.Forms.TextBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,19 +56,10 @@ namespace TwentyFoutyEight
             this.lblThreeTwo = new System.Windows.Forms.Label();
             this.lblThreeThree = new System.Windows.Forms.Label();
             this.lblThreeOne = new System.Windows.Forms.Label();
+            this.labelScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox17
-            // 
-            this.textBox17.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox17.Location = new System.Drawing.Point(754, 55);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(132, 38);
-            this.textBox17.TabIndex = 16;
             // 
             // lblScore
             // 
@@ -162,6 +152,7 @@ namespace TwentyFoutyEight
             this.btnShiftLeft.TabIndex = 26;
             this.btnShiftLeft.Text = "←";
             this.btnShiftLeft.UseVisualStyleBackColor = false;
+            this.btnShiftLeft.Click += new System.EventHandler(this.btnShiftLeft_Click);
             // 
             // pictureBox1
             // 
@@ -375,6 +366,18 @@ namespace TwentyFoutyEight
             this.lblThreeOne.TabIndex = 37;
             this.lblThreeOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelScore
+            // 
+            this.labelScore.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.labelScore.Font = new System.Drawing.Font("Clear Sans", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.Location = new System.Drawing.Point(751, 55);
+            this.labelScore.Margin = new System.Windows.Forms.Padding(4);
+            this.labelScore.Name = "labelScore";
+            this.labelScore.Size = new System.Drawing.Size(140, 68);
+            this.labelScore.TabIndex = 45;
+            this.labelScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -382,6 +385,7 @@ namespace TwentyFoutyEight
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(991, 1153);
+            this.Controls.Add(this.labelScore);
             this.Controls.Add(this.lblFourFour);
             this.Controls.Add(this.lblFourThree);
             this.Controls.Add(this.lblFourTwo);
@@ -406,7 +410,6 @@ namespace TwentyFoutyEight
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.lblScore);
-            this.Controls.Add(this.textBox17);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -415,6 +418,7 @@ namespace TwentyFoutyEight
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2048";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -423,7 +427,6 @@ namespace TwentyFoutyEight
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label1;
@@ -450,6 +453,7 @@ namespace TwentyFoutyEight
         private System.Windows.Forms.Label lblThreeTwo;
         private System.Windows.Forms.Label lblThreeThree;
         private System.Windows.Forms.Label lblThreeOne;
+        private System.Windows.Forms.Label labelScore;
     }
 }
 
