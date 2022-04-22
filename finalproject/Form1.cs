@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Matthew Meppelink
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,31 +19,7 @@ namespace TwentyFoutyEight
     {
         private int[,] _gameBoard = new int[3, 3];
 
-        private Color _textColorWhite = Color.White;
-        private Color _textColorBlack = Color.Black;
-
-
-        private Color _color0 = Color.FromArgb(182, 170, 157);
-
-        private Color _color2 = Color.FromArgb(238, 228, 218);
-        private Color _color4 = Color.FromArgb(237, 223, 201);
-        private Color _color8 = Color.FromArgb(242, 177, 120);
-        private Color _color16 = Color.FromArgb(245, 148, 99);
-
-        private Color _color32 = Color.FromArgb(246, 124, 95);
-        private Color _color64 = Color.FromArgb(246, 94, 59);
-        private Color _color128 = Color.FromArgb(237, 206, 115);
-        private Color _color256 = Color.FromArgb(238, 204, 98);
-
-        private Color _color512 = Color.FromArgb(237, 200, 80);
-        private Color _color1024 = Color.FromArgb(238, 196, 63);
-        private Color _color2048 = Color.FromArgb(237, 194, 46);
-        private Color _color4096 = Color.FromArgb(60, 58, 50);
-
-
-        private Font _fontTen = new Font("Clear Sans", 48, FontStyle.Bold);
-        private Font _fontHundred = new Font("Clear Sans", 44, FontStyle.Bold);
-        private Font _fontThousand = new Font("Clear Sans", 33, FontStyle.Bold);
+        private ShiftLogic _shiftLogic = new ShiftLogic();
 
         public Form1()
         {
@@ -51,80 +29,140 @@ namespace TwentyFoutyEight
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ShiftLogic shiftLogic = new ShiftLogic();
-            _gameBoard = shiftLogic.CreateNewGameBoard();
+            _gameBoard = _shiftLogic.CreateNewGameBoard();
             _updateBoard();
-            labelScore.Text = "0";
+            _updateScore();
+        }
+
+
+        private void btnShiftRight_Click(object sender, EventArgs e)
+        {
+            _shiftLogic.ShiftBoardRight(_gameBoard);
+            _updateBoard();
+            _updateScore();
+        }
+
+        private void btnShiftUp_Click(object sender, EventArgs e)
+        {
+            _shiftLogic.ShiftBoardUp(_gameBoard);
+            _updateBoard();
+            _updateScore();
+        }
+
+        private void btnShiftLeft_Click(object sender, EventArgs e)
+        {
+            _shiftLogic.ShiftBoardLeft(_gameBoard);
+            _updateBoard();
+            _updateScore();
+        }
+
+        private void btnShiftDown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            btnShiftLeft_Click(sender, e);
+        }
+
+        private void _updateScore()
+        {
+            labelScore.Text = _shiftLogic.Score.ToString();
         }
 
         // Updates the color, font, and font color according to the value in _gameBoard[,].
         private void _updateTileColor()
         {
+            Color color0 = Color.FromArgb(182, 170, 157);
+
+            Color color2 = Color.FromArgb(238, 228, 218);
+            Color color4 = Color.FromArgb(237, 223, 201);
+            Color color8 = Color.FromArgb(242, 177, 120);
+            Color color16 = Color.FromArgb(245, 148, 99);
+
+            Color color32 = Color.FromArgb(246, 124, 95);
+            Color color64 = Color.FromArgb(246, 94, 59);
+            Color color128 = Color.FromArgb(237, 206, 115);
+            Color color256 = Color.FromArgb(238, 204, 98);
+
+            Color color512 = Color.FromArgb(237, 200, 80);
+            Color color1024 = Color.FromArgb(238, 196, 63);
+            Color color2048 = Color.FromArgb(237, 194, 46);
+            Color color4096 = Color.FromArgb(60, 58, 50);
+
+            Color _textColorWhite = Color.White;
+            Color _textColorBlack = Color.Black;
+
+            Font _fontTen = new Font("Clear Sans", 48, FontStyle.Bold);
+            Font _fontHundred = new Font("Clear Sans", 44, FontStyle.Bold);
+            Font _fontThousand = new Font("Clear Sans", 33, FontStyle.Bold);
+
             // 1, 1
             int tileValue = _gameBoard[0, 0];
             switch (tileValue)
             {
                 case 0:
-                    lblOneOne.BackColor = _color0;
+                    lblOneOne.BackColor = color0;
                     lblOneOne.ForeColor = _textColorBlack;
                     lblOneOne.Font = _fontTen;
                     break;
                 case 2:
-                    lblOneOne.BackColor = _color2;
+                    lblOneOne.BackColor = color2;
                     lblOneOne.ForeColor = _textColorBlack;
                     lblOneOne.Font = _fontTen;
                     break;
                 case 4:
-                    lblOneOne.BackColor = _color4;
+                    lblOneOne.BackColor = color4;
                     lblOneOne.ForeColor = _textColorBlack;
                     lblOneOne.Font = _fontTen;
                     break;
                 case 8:
-                    lblOneOne.BackColor = _color8;
+                    lblOneOne.BackColor = color8;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontTen;
                     break;
                 case 16:
-                    lblOneOne.BackColor = _color16;
+                    lblOneOne.BackColor = color16;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontTen;
                     break;
                 case 32:
-                    lblOneOne.BackColor = _color32;
+                    lblOneOne.BackColor = color32;
                     lblOneOne.ForeColor = _textColorWhite;
                     break;
                 case 64:
-                    lblOneOne.BackColor = _color64;
+                    lblOneOne.BackColor = color64;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontTen;
                     break;
                 case 128:
-                    lblOneOne.BackColor = _color128;
+                    lblOneOne.BackColor = color128;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontHundred;
                     break;
                 case 256:
-                    lblOneOne.BackColor = _color256;
+                    lblOneOne.BackColor = color256;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontHundred;
                     break;
                 case 512:
-                    lblOneOne.BackColor = _color512;
+                    lblOneOne.BackColor = color512;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblOneOne.BackColor = _color1024;
+                    lblOneOne.BackColor = color1024;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblOneOne.BackColor = _color2048;
+                    lblOneOne.BackColor = color2048;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblOneOne.BackColor = _color4096;
+                    lblOneOne.BackColor = color4096;
                     lblOneOne.ForeColor = _textColorWhite;
                     lblOneOne.Font = _fontThousand;
                     break;
@@ -134,67 +172,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblOneTwo.BackColor = _color0;
+                    lblOneTwo.BackColor = color0;
                     lblOneTwo.ForeColor = _textColorBlack;
                     lblOneTwo.Font = _fontTen;
                     break;
                 case 2:
-                    lblOneTwo.BackColor = _color2;
+                    lblOneTwo.BackColor = color2;
                     lblOneTwo.ForeColor = _textColorBlack;
                     lblOneTwo.Font = _fontTen;
                     break;
                 case 4:
-                    lblOneTwo.BackColor = _color4;
+                    lblOneTwo.BackColor = color4;
                     lblOneTwo.ForeColor = _textColorBlack;
                     lblOneTwo.Font = _fontTen;
                     break;
                 case 8:
-                    lblOneTwo.BackColor = _color8;
+                    lblOneTwo.BackColor = color8;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontTen;
                     break;
                 case 16:
-                    lblOneTwo.BackColor = _color16;
+                    lblOneTwo.BackColor = color16;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontTen;
                     break;
                 case 32:
-                    lblOneTwo.BackColor = _color32;
+                    lblOneTwo.BackColor = color32;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontTen;
                     break;
                 case 64:
-                    lblOneTwo.BackColor = _color64;
+                    lblOneTwo.BackColor = color64;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontTen;
                     break;
                 case 128:
-                    lblOneTwo.BackColor = _color128;
+                    lblOneTwo.BackColor = color128;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontHundred;
                     break;
                 case 256:
-                    lblOneTwo.BackColor = _color256;
+                    lblOneTwo.BackColor = color256;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontHundred;
                     break;
                 case 512:
-                    lblOneTwo.BackColor = _color512;
+                    lblOneTwo.BackColor = color512;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblOneTwo.BackColor = _color1024;
+                    lblOneTwo.BackColor = color1024;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblOneTwo.BackColor = _color2048;
+                    lblOneTwo.BackColor = color2048;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblOneTwo.BackColor = _color4096;
+                    lblOneTwo.BackColor = color4096;
                     lblOneTwo.ForeColor = _textColorWhite;
                     lblOneTwo.Font = _fontThousand;
                     break;
@@ -204,67 +242,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblOneThree.BackColor = _color0;
+                    lblOneThree.BackColor = color0;
                     lblOneThree.ForeColor = _textColorBlack;
                     lblOneThree.Font = _fontTen;
                     break;
                 case 2:
-                    lblOneThree.BackColor = _color2;
+                    lblOneThree.BackColor = color2;
                     lblOneThree.ForeColor = _textColorBlack;
                     lblOneThree.Font = _fontTen;
                     break;
                 case 4:
-                    lblOneThree.BackColor = _color4;
+                    lblOneThree.BackColor = color4;
                     lblOneThree.ForeColor = _textColorBlack;
                     lblOneThree.Font = _fontTen;
                     break;
                 case 8:
-                    lblOneThree.BackColor = _color8;
+                    lblOneThree.BackColor = color8;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontTen;
                     break;
                 case 16:
-                    lblOneThree.BackColor = _color16;
+                    lblOneThree.BackColor = color16;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontTen;
                     break;
                 case 32:
-                    lblOneThree.BackColor = _color32;
+                    lblOneThree.BackColor = color32;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontTen;
                     break;
                 case 64:
-                    lblOneThree.BackColor = _color64;
+                    lblOneThree.BackColor = color64;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontTen;
                     break;
                 case 128:
-                    lblOneThree.BackColor = _color128;
+                    lblOneThree.BackColor = color128;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontHundred;
                     break;
                 case 256:
-                    lblOneThree.BackColor = _color256;
+                    lblOneThree.BackColor = color256;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontHundred;
                     break;
                 case 512:
-                    lblOneThree.BackColor = _color512;
+                    lblOneThree.BackColor = color512;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblOneThree.BackColor = _color1024;
+                    lblOneThree.BackColor = color1024;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblOneThree.BackColor = _color2048;
+                    lblOneThree.BackColor = color2048;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblOneThree.BackColor = _color4096;
+                    lblOneThree.BackColor = color4096;
                     lblOneThree.ForeColor = _textColorWhite;
                     lblOneThree.Font = _fontThousand;
                     break;
@@ -274,67 +312,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblOneFour.BackColor = _color0;
+                    lblOneFour.BackColor = color0;
                     lblOneFour.ForeColor = _textColorBlack;
                     lblOneFour.Font = _fontTen;
                     break;
                 case 2:
-                    lblOneFour.BackColor = _color2;
+                    lblOneFour.BackColor = color2;
                     lblOneFour.ForeColor = _textColorBlack;
                     lblOneFour.Font = _fontTen;
                     break;
                 case 4:
-                    lblOneFour.BackColor = _color4;
+                    lblOneFour.BackColor = color4;
                     lblOneFour.ForeColor = _textColorBlack;
                     lblOneFour.Font = _fontTen;
                     break;
                 case 8:
-                    lblOneFour.BackColor = _color8;
+                    lblOneFour.BackColor = color8;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontTen;
                     break;
                 case 16:
-                    lblOneFour.BackColor = _color16;
+                    lblOneFour.BackColor = color16;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontTen;
                     break;
                 case 32:
-                    lblOneFour.BackColor = _color32;
+                    lblOneFour.BackColor = color32;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontTen;
                     break;
                 case 64:
-                    lblOneFour.BackColor = _color64;
+                    lblOneFour.BackColor = color64;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontTen;
                     break;
                 case 128:
-                    lblOneFour.BackColor = _color128;
+                    lblOneFour.BackColor = color128;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontHundred;
                     break;
                 case 256:
-                    lblOneFour.BackColor = _color256;
+                    lblOneFour.BackColor = color256;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontHundred;
                     break;
                 case 512:
-                    lblOneFour.BackColor = _color512;
+                    lblOneFour.BackColor = color512;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblOneFour.BackColor = _color1024;
+                    lblOneFour.BackColor = color1024;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblOneFour.BackColor = _color2048;
+                    lblOneFour.BackColor = color2048;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblOneFour.BackColor = _color4096;
+                    lblOneFour.BackColor = color4096;
                     lblOneFour.ForeColor = _textColorWhite;
                     lblOneFour.Font = _fontThousand;
                     break;
@@ -346,67 +384,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblTwoOne.BackColor = _color0;
+                    lblTwoOne.BackColor = color0;
                     lblTwoOne.ForeColor = _textColorBlack;
                     lblTwoOne.Font = _fontTen;
                     break;
                 case 2:
-                    lblTwoOne.BackColor = _color2;
+                    lblTwoOne.BackColor = color2;
                     lblTwoOne.ForeColor = _textColorBlack;
                     lblTwoOne.Font = _fontTen;
                     break;
                 case 4:
-                    lblTwoOne.BackColor = _color4;
+                    lblTwoOne.BackColor = color4;
                     lblTwoOne.ForeColor = _textColorBlack;
                     lblTwoOne.Font = _fontTen;
                     break;
                 case 8:
-                    lblTwoOne.BackColor = _color8;
+                    lblTwoOne.BackColor = color8;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontTen;
                     break;
                 case 16:
-                    lblTwoOne.BackColor = _color16;
+                    lblTwoOne.BackColor = color16;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontTen;
                     break;
                 case 32:
-                    lblTwoOne.BackColor = _color32;
+                    lblTwoOne.BackColor = color32;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontTen;
                     break;
                 case 64:
-                    lblTwoOne.BackColor = _color64;
+                    lblTwoOne.BackColor = color64;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontTen;
                     break;
                 case 128:
-                    lblTwoOne.BackColor = _color128;
+                    lblTwoOne.BackColor = color128;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontHundred;
                     break;
                 case 256:
-                    lblTwoOne.BackColor = _color256;
+                    lblTwoOne.BackColor = color256;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontHundred;
                     break;
                 case 512:
-                    lblTwoOne.BackColor = _color512;
+                    lblTwoOne.BackColor = color512;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblTwoOne.BackColor = _color1024;
+                    lblTwoOne.BackColor = color1024;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblTwoOne.BackColor = _color2048;
+                    lblTwoOne.BackColor = color2048;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblTwoOne.BackColor = _color4096;
+                    lblTwoOne.BackColor = color4096;
                     lblTwoOne.ForeColor = _textColorWhite;
                     lblTwoOne.Font = _fontThousand;
                     break;
@@ -416,67 +454,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblTwoTwo.BackColor = _color0;
+                    lblTwoTwo.BackColor = color0;
                     lblTwoTwo.ForeColor = _textColorBlack;
                     lblTwoTwo.Font = _fontTen;
                     break;
                 case 2:
-                    lblTwoTwo.BackColor = _color2;
+                    lblTwoTwo.BackColor = color2;
                     lblTwoTwo.ForeColor = _textColorBlack;
                     lblTwoTwo.Font = _fontTen;
                     break;
                 case 4:
-                    lblTwoTwo.BackColor = _color4;
+                    lblTwoTwo.BackColor = color4;
                     lblTwoTwo.ForeColor = _textColorBlack;
                     lblTwoTwo.Font = _fontTen;
                     break;
                 case 8:
-                    lblTwoTwo.BackColor = _color8;
+                    lblTwoTwo.BackColor = color8;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontTen;
                     break;
                 case 16:
-                    lblTwoTwo.BackColor = _color16;
+                    lblTwoTwo.BackColor = color16;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontTen;
                     break;
                 case 32:
-                    lblTwoTwo.BackColor = _color32;
+                    lblTwoTwo.BackColor = color32;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontTen;
                     break;
                 case 64:
-                    lblTwoTwo.BackColor = _color64;
+                    lblTwoTwo.BackColor = color64;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontTen;
                     break;
                 case 128:
-                    lblTwoTwo.BackColor = _color128;
+                    lblTwoTwo.BackColor = color128;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontHundred;
                     break;
                 case 256:
-                    lblTwoTwo.BackColor = _color256;
+                    lblTwoTwo.BackColor = color256;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontHundred;
                     break;
                 case 512:
-                    lblTwoTwo.BackColor = _color512;
+                    lblTwoTwo.BackColor = color512;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblTwoTwo.BackColor = _color1024;
+                    lblTwoTwo.BackColor = color1024;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblTwoTwo.BackColor = _color2048;
+                    lblTwoTwo.BackColor = color2048;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblTwoTwo.BackColor = _color4096;
+                    lblTwoTwo.BackColor = color4096;
                     lblTwoTwo.ForeColor = _textColorWhite;
                     lblTwoTwo.Font = _fontThousand;
                     break;
@@ -486,67 +524,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblTwoThree.BackColor = _color0;
+                    lblTwoThree.BackColor = color0;
                     lblTwoThree.ForeColor = _textColorBlack;
                     lblTwoThree.Font = _fontTen;
                     break;
                 case 2:
-                    lblTwoThree.BackColor = _color2;
+                    lblTwoThree.BackColor = color2;
                     lblTwoThree.ForeColor = _textColorBlack;
                     lblTwoThree.Font = _fontTen;
                     break;
                 case 4:
-                    lblTwoThree.BackColor = _color4;
+                    lblTwoThree.BackColor = color4;
                     lblTwoThree.ForeColor = _textColorBlack;
                     lblTwoThree.Font = _fontTen;
                     break;
                 case 8:
-                    lblTwoThree.BackColor = _color8;
+                    lblTwoThree.BackColor = color8;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontTen;
                     break;
                 case 16:
-                    lblTwoThree.BackColor = _color16;
+                    lblTwoThree.BackColor = color16;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontTen;
                     break;
                 case 32:
-                    lblTwoThree.BackColor = _color32;
+                    lblTwoThree.BackColor = color32;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontTen;
                     break;
                 case 64:
-                    lblTwoThree.BackColor = _color64;
+                    lblTwoThree.BackColor = color64;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontTen;
                     break;
                 case 128:
-                    lblTwoThree.BackColor = _color128;
+                    lblTwoThree.BackColor = color128;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontHundred;
                     break;
                 case 256:
-                    lblTwoThree.BackColor = _color256;
+                    lblTwoThree.BackColor = color256;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontHundred;
                     break;
                 case 512:
-                    lblTwoThree.BackColor = _color512;
+                    lblTwoThree.BackColor = color512;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblTwoThree.BackColor = _color1024;
+                    lblTwoThree.BackColor = color1024;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblTwoThree.BackColor = _color2048;
+                    lblTwoThree.BackColor = color2048;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblTwoThree.BackColor = _color4096;
+                    lblTwoThree.BackColor = color4096;
                     lblTwoThree.ForeColor = _textColorWhite;
                     lblTwoThree.Font = _fontThousand;
                     break;
@@ -556,67 +594,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblTwoFour.BackColor = _color0;
+                    lblTwoFour.BackColor = color0;
                     lblTwoFour.ForeColor = _textColorBlack;
                     lblTwoFour.Font = _fontTen;
                     break;
                 case 2:
-                    lblTwoFour.BackColor = _color2;
+                    lblTwoFour.BackColor = color2;
                     lblTwoFour.ForeColor = _textColorBlack;
                     lblTwoFour.Font = _fontTen;
                     break;
                 case 4:
-                    lblTwoFour.BackColor = _color4;
+                    lblTwoFour.BackColor = color4;
                     lblTwoFour.ForeColor = _textColorBlack;
                     lblTwoFour.Font = _fontTen;
                     break;
                 case 8:
-                    lblTwoFour.BackColor = _color8;
+                    lblTwoFour.BackColor = color8;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontTen;
                     break;
                 case 16:
-                    lblTwoFour.BackColor = _color16;
+                    lblTwoFour.BackColor = color16;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontTen;
                     break;
                 case 32:
-                    lblTwoFour.BackColor = _color32;
+                    lblTwoFour.BackColor = color32;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontTen;
                     break;
                 case 64:
-                    lblTwoFour.BackColor = _color64;
+                    lblTwoFour.BackColor = color64;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontTen;
                     break;
                 case 128:
-                    lblTwoFour.BackColor = _color128;
+                    lblTwoFour.BackColor = color128;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontHundred;
                     break;
                 case 256:
-                    lblTwoFour.BackColor = _color256;
+                    lblTwoFour.BackColor = color256;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontHundred;
                     break;
                 case 512:
-                    lblTwoFour.BackColor = _color512;
+                    lblTwoFour.BackColor = color512;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblTwoFour.BackColor = _color1024;
+                    lblTwoFour.BackColor = color1024;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblTwoFour.BackColor = _color2048;
+                    lblTwoFour.BackColor = color2048;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblTwoFour.BackColor = _color4096;
+                    lblTwoFour.BackColor = color4096;
                     lblTwoFour.ForeColor = _textColorWhite;
                     lblTwoFour.Font = _fontThousand;
                     break;
@@ -628,67 +666,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblThreeOne.BackColor = _color0;
+                    lblThreeOne.BackColor = color0;
                     lblThreeOne.ForeColor = _textColorBlack;
                     lblThreeOne.Font = _fontTen;
                     break;
                 case 2:
-                    lblThreeOne.BackColor = _color2;
+                    lblThreeOne.BackColor = color2;
                     lblThreeOne.ForeColor = _textColorBlack;
                     lblThreeOne.Font = _fontTen;
                     break;
                 case 4:
-                    lblThreeOne.BackColor = _color4;
+                    lblThreeOne.BackColor = color4;
                     lblThreeOne.ForeColor = _textColorBlack;
                     lblThreeOne.Font = _fontTen;
                     break;
                 case 8:
-                    lblThreeOne.BackColor = _color8;
+                    lblThreeOne.BackColor = color8;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontTen;
                     break;
                 case 16:
-                    lblThreeOne.BackColor = _color16;
+                    lblThreeOne.BackColor = color16;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontTen;
                     break;
                 case 32:
-                    lblThreeOne.BackColor = _color32;
+                    lblThreeOne.BackColor = color32;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontTen;
                     break;
                 case 64:
-                    lblThreeOne.BackColor = _color64;
+                    lblThreeOne.BackColor = color64;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontTen;
                     break;
                 case 128:
-                    lblThreeOne.BackColor = _color128;
+                    lblThreeOne.BackColor = color128;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontHundred;
                     break;
                 case 256:
-                    lblThreeOne.BackColor = _color256;
+                    lblThreeOne.BackColor = color256;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontHundred;
                     break;
                 case 512:
-                    lblThreeOne.BackColor = _color512;
+                    lblThreeOne.BackColor = color512;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblThreeOne.BackColor = _color1024;
+                    lblThreeOne.BackColor = color1024;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblThreeOne.BackColor = _color2048;
+                    lblThreeOne.BackColor = color2048;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblThreeOne.BackColor = _color4096;
+                    lblThreeOne.BackColor = color4096;
                     lblThreeOne.ForeColor = _textColorWhite;
                     lblThreeOne.Font = _fontThousand;
                     break;
@@ -698,68 +736,68 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblThreeTwo.BackColor = _color0;
+                    lblThreeTwo.BackColor = color0;
                     lblThreeTwo.ForeColor = _textColorBlack;
                     lblThreeTwo.Font = _fontHundred;
 
                     break;
                 case 2:
-                    lblThreeTwo.BackColor = _color2;
+                    lblThreeTwo.BackColor = color2;
                     lblThreeTwo.ForeColor = _textColorBlack;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 4:
-                    lblThreeTwo.BackColor = _color4;
+                    lblThreeTwo.BackColor = color4;
                     lblThreeTwo.ForeColor = _textColorBlack;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 8:
-                    lblThreeTwo.BackColor = _color8;
+                    lblThreeTwo.BackColor = color8;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 16:
-                    lblThreeTwo.BackColor = _color16;
+                    lblThreeTwo.BackColor = color16;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 32:
-                    lblThreeTwo.BackColor = _color32;
+                    lblThreeTwo.BackColor = color32;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 64:
-                    lblThreeTwo.BackColor = _color64;
+                    lblThreeTwo.BackColor = color64;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 128:
-                    lblThreeTwo.BackColor = _color128;
+                    lblThreeTwo.BackColor = color128;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 256:
-                    lblThreeTwo.BackColor = _color256;
+                    lblThreeTwo.BackColor = color256;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 512:
-                    lblThreeTwo.BackColor = _color512;
+                    lblThreeTwo.BackColor = color512;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblThreeTwo.BackColor = _color1024;
+                    lblThreeTwo.BackColor = color1024;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblThreeTwo.BackColor = _color2048;
+                    lblThreeTwo.BackColor = color2048;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblThreeTwo.BackColor = _color4096;
+                    lblThreeTwo.BackColor = color4096;
                     lblThreeTwo.ForeColor = _textColorWhite;
                     lblThreeTwo.Font = _fontThousand;
                     break;
@@ -769,67 +807,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblThreeThree.BackColor = _color0;
+                    lblThreeThree.BackColor = color0;
                     lblThreeThree.ForeColor = _textColorBlack;
                     lblThreeThree.Font = _fontTen;
                     break;
                 case 2:
-                    lblThreeThree.BackColor = _color2;
+                    lblThreeThree.BackColor = color2;
                     lblThreeThree.ForeColor = _textColorBlack;
                     lblThreeThree.Font = _fontTen;
                     break;
                 case 4:
-                    lblThreeThree.BackColor = _color4;
+                    lblThreeThree.BackColor = color4;
                     lblThreeThree.ForeColor = _textColorBlack;
                     lblThreeThree.Font = _fontTen;
                     break;
                 case 8:
-                    lblThreeThree.BackColor = _color8;
+                    lblThreeThree.BackColor = color8;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontTen;
                     break;
                 case 16:
-                    lblThreeThree.BackColor = _color16;
+                    lblThreeThree.BackColor = color16;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontTen;
                     break;
                 case 32:
-                    lblThreeThree.BackColor = _color32;
+                    lblThreeThree.BackColor = color32;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontTen;
                     break;
                 case 64:
-                    lblThreeThree.BackColor = _color64;
+                    lblThreeThree.BackColor = color64;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontTen;
                     break;
                 case 128:
-                    lblThreeThree.BackColor = _color128;
+                    lblThreeThree.BackColor = color128;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontHundred;
                     break;
                 case 256:
-                    lblThreeThree.BackColor = _color256;
+                    lblThreeThree.BackColor = color256;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontHundred;
                     break;
                 case 512:
-                    lblThreeThree.BackColor = _color512;
+                    lblThreeThree.BackColor = color512;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblThreeThree.BackColor = _color1024;
+                    lblThreeThree.BackColor = color1024;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblThreeThree.BackColor = _color2048;
+                    lblThreeThree.BackColor = color2048;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblThreeThree.BackColor = _color4096;
+                    lblThreeThree.BackColor = color4096;
                     lblThreeThree.ForeColor = _textColorWhite;
                     lblThreeThree.Font = _fontThousand;
                     break;
@@ -839,67 +877,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblThreeFour.BackColor = _color0;
+                    lblThreeFour.BackColor = color0;
                     lblThreeFour.ForeColor = _textColorBlack;
                     lblThreeFour.Font = _fontTen;
                     break;
                 case 2:
-                    lblThreeFour.BackColor = _color2;
+                    lblThreeFour.BackColor = color2;
                     lblThreeFour.ForeColor = _textColorBlack;
                     lblThreeFour.Font = _fontTen;
                     break;
                 case 4:
-                    lblThreeFour.BackColor = _color4;
+                    lblThreeFour.BackColor = color4;
                     lblThreeFour.ForeColor = _textColorBlack;
                     lblThreeFour.Font = _fontTen;
                     break;
                 case 8:
-                    lblThreeFour.BackColor = _color8;
+                    lblThreeFour.BackColor = color8;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontTen;
                     break;
                 case 16:
-                    lblThreeFour.BackColor = _color16;
+                    lblThreeFour.BackColor = color16;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontTen;
                     break;
                 case 32:
-                    lblThreeFour.BackColor = _color32;
+                    lblThreeFour.BackColor = color32;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontTen;
                     break;
                 case 64:
-                    lblThreeFour.BackColor = _color64;
+                    lblThreeFour.BackColor = color64;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontTen;
                     break;
                 case 128:
-                    lblThreeFour.BackColor = _color128;
+                    lblThreeFour.BackColor = color128;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontHundred;
                     break;
                 case 256:
-                    lblThreeFour.BackColor = _color256;
+                    lblThreeFour.BackColor = color256;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontHundred;
                     break;
                 case 512:
-                    lblThreeFour.BackColor = _color512;
+                    lblThreeFour.BackColor = color512;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblThreeFour.BackColor = _color1024;
+                    lblThreeFour.BackColor = color1024;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblThreeFour.BackColor = _color2048;
+                    lblThreeFour.BackColor = color2048;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblThreeFour.BackColor = _color4096;
+                    lblThreeFour.BackColor = color4096;
                     lblThreeFour.ForeColor = _textColorWhite;
                     lblThreeFour.Font = _fontThousand;
                     break;
@@ -911,68 +949,68 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblFourOne.BackColor = _color0;
+                    lblFourOne.BackColor = color0;
                     lblFourOne.ForeColor = _textColorBlack;
                     lblFourOne.Font = _fontTen;
 
                     break;
                 case 2:
-                    lblFourOne.BackColor = _color2;
+                    lblFourOne.BackColor = color2;
                     lblFourOne.ForeColor = _textColorBlack;
                     lblFourOne.Font = _fontTen;
                     break;
                 case 4:
-                    lblFourOne.BackColor = _color4;
+                    lblFourOne.BackColor = color4;
                     lblFourOne.ForeColor = _textColorBlack;
                     lblFourOne.Font = _fontTen;
                     break;
                 case 8:
-                    lblFourOne.BackColor = _color8;
+                    lblFourOne.BackColor = color8;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontTen;
                     break;
                 case 16:
-                    lblFourOne.BackColor = _color16;
+                    lblFourOne.BackColor = color16;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontTen;
                     break;
                 case 32:
-                    lblFourOne.BackColor = _color32;
+                    lblFourOne.BackColor = color32;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontTen;
                     break;
                 case 64:
-                    lblFourOne.BackColor = _color64;
+                    lblFourOne.BackColor = color64;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontTen;
                     break;
                 case 128:
-                    lblFourOne.BackColor = _color128;
+                    lblFourOne.BackColor = color128;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontHundred;
                     break;
                 case 256:
-                    lblFourOne.BackColor = _color256;
+                    lblFourOne.BackColor = color256;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontHundred;
                     break;
                 case 512:
-                    lblFourOne.BackColor = _color512;
+                    lblFourOne.BackColor = color512;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblFourOne.BackColor = _color1024;
+                    lblFourOne.BackColor = color1024;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblFourOne.BackColor = _color2048;
+                    lblFourOne.BackColor = color2048;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblFourOne.BackColor = _color4096;
+                    lblFourOne.BackColor = color4096;
                     lblFourOne.ForeColor = _textColorWhite;
                     lblFourOne.Font = _fontThousand;
                     break;
@@ -982,67 +1020,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblFourTwo.BackColor = _color0;
+                    lblFourTwo.BackColor = color0;
                     lblFourTwo.ForeColor = _textColorBlack;
                     lblFourTwo.Font = _fontTen;
                     break;
                 case 2:
-                    lblFourTwo.BackColor = _color2;
+                    lblFourTwo.BackColor = color2;
                     lblFourTwo.ForeColor = _textColorBlack;
                     lblFourTwo.Font = _fontTen;
                     break;
                 case 4:
-                    lblFourTwo.BackColor = _color4;
+                    lblFourTwo.BackColor = color4;
                     lblFourTwo.ForeColor = _textColorBlack;
                     lblFourTwo.Font = _fontTen;
                     break;
                 case 8:
-                    lblFourTwo.BackColor = _color8;
+                    lblFourTwo.BackColor = color8;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontTen;
                     break;
                 case 16:
-                    lblFourTwo.BackColor = _color16;
+                    lblFourTwo.BackColor = color16;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontTen;
                     break;
                 case 32:
-                    lblFourTwo.BackColor = _color32;
+                    lblFourTwo.BackColor = color32;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontTen;
                     break;
                 case 64:
-                    lblFourTwo.BackColor = _color64;
+                    lblFourTwo.BackColor = color64;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontTen;
                     break;
                 case 128:
-                    lblFourTwo.BackColor = _color128;
+                    lblFourTwo.BackColor = color128;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontHundred;
                     break;
                 case 256:
-                    lblFourTwo.BackColor = _color256;
+                    lblFourTwo.BackColor = color256;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontHundred;
                     break;
                 case 512:
-                    lblFourTwo.BackColor = _color512;
+                    lblFourTwo.BackColor = color512;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblFourTwo.BackColor = _color1024;
+                    lblFourTwo.BackColor = color1024;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblFourTwo.BackColor = _color2048;
+                    lblFourTwo.BackColor = color2048;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblFourTwo.BackColor = _color4096;
+                    lblFourTwo.BackColor = color4096;
                     lblFourTwo.ForeColor = _textColorWhite;
                     lblFourTwo.Font = _fontThousand;
                     break;
@@ -1052,67 +1090,67 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblFourThree.BackColor = _color0;
+                    lblFourThree.BackColor = color0;
                     lblFourThree.ForeColor = _textColorBlack;
                     lblFourThree.Font = _fontTen;
                     break;
                 case 2:
-                    lblFourThree.BackColor = _color2;
+                    lblFourThree.BackColor = color2;
                     lblFourThree.ForeColor = _textColorBlack;
                     lblFourThree.Font = _fontTen;
                     break;
                 case 4:
-                    lblFourThree.BackColor = _color4;
+                    lblFourThree.BackColor = color4;
                     lblFourThree.ForeColor = _textColorBlack;
                     lblFourThree.Font = _fontTen;
                     break;
                 case 8:
-                    lblFourThree.BackColor = _color8;
+                    lblFourThree.BackColor = color8;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontTen;
                     break;
                 case 16:
-                    lblFourThree.BackColor = _color16;
+                    lblFourThree.BackColor = color16;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontTen;
                     break;
                 case 32:
-                    lblFourThree.BackColor = _color32;
+                    lblFourThree.BackColor = color32;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontTen;
                     break;
                 case 64:
-                    lblFourThree.BackColor = _color64;
+                    lblFourThree.BackColor = color64;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontTen;
                     break;
                 case 128:
-                    lblFourThree.BackColor = _color128;
+                    lblFourThree.BackColor = color128;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontHundred;
                     break;
                 case 256:
-                    lblFourThree.BackColor = _color256;
+                    lblFourThree.BackColor = color256;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontHundred;
                     break;
                 case 512:
-                    lblFourThree.BackColor = _color512;
+                    lblFourThree.BackColor = color512;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblFourThree.BackColor = _color1024;
+                    lblFourThree.BackColor = color1024;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblFourThree.BackColor = _color2048;
+                    lblFourThree.BackColor = color2048;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblFourThree.BackColor = _color4096;
+                    lblFourThree.BackColor = color4096;
                     lblFourThree.ForeColor = _textColorWhite;
                     lblFourThree.Font = _fontThousand;
                     break;
@@ -1122,74 +1160,74 @@ namespace TwentyFoutyEight
             switch (tileValue)
             {
                 case 0:
-                    lblFourFour.BackColor = _color0;
+                    lblFourFour.BackColor = color0;
                     lblFourFour.ForeColor = _textColorBlack;
                     lblFourFour.Font = _fontTen;
                     break;
                 case 2:
-                    lblFourFour.BackColor = _color2;
+                    lblFourFour.BackColor = color2;
                     lblFourFour.ForeColor = _textColorBlack;
                     lblFourFour.Font = _fontTen;
                     break;
                 case 4:
-                    lblFourFour.BackColor = _color4;
+                    lblFourFour.BackColor = color4;
                     lblFourFour.ForeColor = _textColorBlack;
                     lblFourFour.Font = _fontTen;
                     break;
                 case 8:
-                    lblFourFour.BackColor = _color8;
+                    lblFourFour.BackColor = color8;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontTen;
                     break;
                 case 16:
-                    lblFourFour.BackColor = _color16;
+                    lblFourFour.BackColor = color16;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontTen;
                     break;
                 case 32:
-                    lblFourFour.BackColor = _color32;
+                    lblFourFour.BackColor = color32;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontTen;
                     break;
                 case 64:
-                    lblFourFour.BackColor = _color64;
+                    lblFourFour.BackColor = color64;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontTen;
                     break;
                 case 128:
-                    lblFourFour.BackColor = _color128;
+                    lblFourFour.BackColor = color128;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontHundred;
                     break;
                 case 256:
-                    lblFourFour.BackColor = _color256;
+                    lblFourFour.BackColor = color256;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontHundred;
                     break;
                 case 512:
-                    lblFourFour.BackColor = _color512;
+                    lblFourFour.BackColor = color512;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontHundred;
                     break;
                 case 1024:
-                    lblFourFour.BackColor = _color1024;
+                    lblFourFour.BackColor = color1024;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontThousand;
                     break;
                 case 2048:
-                    lblFourFour.BackColor = _color2048;
+                    lblFourFour.BackColor = color2048;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontThousand;
                     break;
                 case int n when (tileValue > 2048):
-                    lblFourFour.BackColor = _color4096;
+                    lblFourFour.BackColor = color4096;
                     lblFourFour.ForeColor = _textColorWhite;
                     lblFourFour.Font = _fontThousand;
                     break;
             }
 
         }
-        
+
         // Updates the game board tiles to represent _gameBoard[,], A '0' is represented by an empty string.
         private void _updateBoard()
         {
@@ -1346,47 +1384,6 @@ namespace TwentyFoutyEight
                 lblFourFour.Text = "";
             }
             _updateTileColor();
-        }
-
-        private void _updateScore()
-        {
-            ShiftLogic shiftLogic = new ShiftLogic();
-            labelScore.Text = shiftLogic.Score.ToString();
-        }
-
-
-        private void btnShiftRight_Click(object sender, EventArgs e)
-        {
-            ShiftLogic shiftLogic = new ShiftLogic();
-            shiftLogic.ShiftBoardRight(_gameBoard);
-            _updateBoard();
-            _updateScore();
-        }
-
-        private void btnShiftUp_Click(object sender, EventArgs e)
-        {
-            ShiftLogic shiftLogic = new ShiftLogic();
-            shiftLogic.ShiftBoardUp(_gameBoard);
-            _updateBoard();
-            _updateScore();
-        }
-
-        private void btnShiftLeft_Click(object sender, EventArgs e)
-        {
-            ShiftLogic shiftLogic = new ShiftLogic();
-            shiftLogic.ShiftBoardLeft(_gameBoard);
-            _updateBoard();
-            _updateScore();
-        }
-
-        private void btnShiftDown_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            btnShiftLeft_Click(sender, e);
         }
     }
 }

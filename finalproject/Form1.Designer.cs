@@ -31,8 +31,6 @@ namespace TwentyFoutyEight
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblScore = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnShiftRight = new System.Windows.Forms.Button();
             this.btnShiftUp = new System.Windows.Forms.Button();
@@ -57,6 +55,9 @@ namespace TwentyFoutyEight
             this.lblThreeThree = new System.Windows.Forms.Label();
             this.lblThreeOne = new System.Windows.Forms.Label();
             this.labelScore = new System.Windows.Forms.Label();
+            this.lblHighScore = new System.Windows.Forms.Label();
+            this.labelHighScore = new System.Windows.Forms.Label();
+            this.lblGameName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -65,54 +66,37 @@ namespace TwentyFoutyEight
             // 
             this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblScore.AutoSize = true;
-            this.lblScore.Location = new System.Drawing.Point(798, 34);
+            this.lblScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblScore.Font = new System.Drawing.Font("Clear Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.White;
+            this.lblScore.Location = new System.Drawing.Point(686, 15);
             this.lblScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(45, 17);
+            this.lblScore.Size = new System.Drawing.Size(65, 28);
             this.lblScore.TabIndex = 17;
             this.lblScore.Text = "Score";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox18.Location = new System.Drawing.Point(99, 55);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(132, 38);
-            this.textBox18.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "High Score";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(22, 15);
+            this.button1.Location = new System.Drawing.Point(595, 15);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 41);
             this.button1.TabIndex = 20;
             this.button1.Text = "♻️";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Form1_Load);
             // 
             // btnShiftRight
             // 
             this.btnShiftRight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShiftRight.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftRight.Location = new System.Drawing.Point(935, 406);
+            this.btnShiftRight.Location = new System.Drawing.Point(786, 1077);
             this.btnShiftRight.Name = "btnShiftRight";
-            this.btnShiftRight.Size = new System.Drawing.Size(35, 360);
+            this.btnShiftRight.Size = new System.Drawing.Size(35, 35);
             this.btnShiftRight.TabIndex = 22;
             this.btnShiftRight.Text = "→";
             this.btnShiftRight.UseVisualStyleBackColor = false;
@@ -122,9 +106,9 @@ namespace TwentyFoutyEight
             // 
             this.btnShiftUp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShiftUp.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftUp.Location = new System.Drawing.Point(319, 123);
+            this.btnShiftUp.Location = new System.Drawing.Point(827, 1077);
             this.btnShiftUp.Name = "btnShiftUp";
-            this.btnShiftUp.Size = new System.Drawing.Size(360, 35);
+            this.btnShiftUp.Size = new System.Drawing.Size(35, 35);
             this.btnShiftUp.TabIndex = 24;
             this.btnShiftUp.Text = "↑";
             this.btnShiftUp.UseVisualStyleBackColor = false;
@@ -134,9 +118,9 @@ namespace TwentyFoutyEight
             // 
             this.btnShiftDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShiftDown.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftDown.Location = new System.Drawing.Point(320, 1035);
+            this.btnShiftDown.Location = new System.Drawing.Point(868, 1077);
             this.btnShiftDown.Name = "btnShiftDown";
-            this.btnShiftDown.Size = new System.Drawing.Size(360, 35);
+            this.btnShiftDown.Size = new System.Drawing.Size(35, 35);
             this.btnShiftDown.TabIndex = 25;
             this.btnShiftDown.Text = "↓";
             this.btnShiftDown.UseVisualStyleBackColor = false;
@@ -146,9 +130,9 @@ namespace TwentyFoutyEight
             // 
             this.btnShiftLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShiftLeft.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftLeft.Location = new System.Drawing.Point(22, 406);
+            this.btnShiftLeft.Location = new System.Drawing.Point(745, 1077);
             this.btnShiftLeft.Name = "btnShiftLeft";
-            this.btnShiftLeft.Size = new System.Drawing.Size(35, 360);
+            this.btnShiftLeft.Size = new System.Drawing.Size(35, 35);
             this.btnShiftLeft.TabIndex = 26;
             this.btnShiftLeft.Text = "←";
             this.btnShiftLeft.UseVisualStyleBackColor = false;
@@ -158,7 +142,7 @@ namespace TwentyFoutyEight
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 184);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(882, 887);
             this.pictureBox1.TabIndex = 27;
@@ -170,7 +154,7 @@ namespace TwentyFoutyEight
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
             this.pictureBox2.Location = new System.Drawing.Point(0, -6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(994, 1162);
+            this.pictureBox2.Size = new System.Drawing.Size(994, 1231);
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
@@ -179,7 +163,7 @@ namespace TwentyFoutyEight
             this.lblOneOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblOneOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOneOne.Location = new System.Drawing.Point(80, 174);
+            this.lblOneOne.Location = new System.Drawing.Point(80, 209);
             this.lblOneOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneOne.Name = "lblOneOne";
             this.lblOneOne.Size = new System.Drawing.Size(190, 190);
@@ -191,7 +175,7 @@ namespace TwentyFoutyEight
             this.lblOneTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblOneTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOneTwo.Location = new System.Drawing.Point(296, 174);
+            this.lblOneTwo.Location = new System.Drawing.Point(296, 209);
             this.lblOneTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneTwo.Name = "lblOneTwo";
             this.lblOneTwo.Size = new System.Drawing.Size(190, 190);
@@ -203,7 +187,7 @@ namespace TwentyFoutyEight
             this.lblOneThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblOneThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOneThree.Location = new System.Drawing.Point(511, 174);
+            this.lblOneThree.Location = new System.Drawing.Point(511, 209);
             this.lblOneThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneThree.Name = "lblOneThree";
             this.lblOneThree.Size = new System.Drawing.Size(190, 190);
@@ -215,7 +199,7 @@ namespace TwentyFoutyEight
             this.lblOneFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblOneFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOneFour.Location = new System.Drawing.Point(722, 174);
+            this.lblOneFour.Location = new System.Drawing.Point(722, 209);
             this.lblOneFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneFour.Name = "lblOneFour";
             this.lblOneFour.Size = new System.Drawing.Size(190, 190);
@@ -227,7 +211,7 @@ namespace TwentyFoutyEight
             this.lblTwoFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblTwoFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTwoFour.Location = new System.Drawing.Point(722, 389);
+            this.lblTwoFour.Location = new System.Drawing.Point(722, 424);
             this.lblTwoFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoFour.Name = "lblTwoFour";
             this.lblTwoFour.Size = new System.Drawing.Size(190, 190);
@@ -239,7 +223,7 @@ namespace TwentyFoutyEight
             this.lblTwoThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblTwoThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTwoThree.Location = new System.Drawing.Point(511, 389);
+            this.lblTwoThree.Location = new System.Drawing.Point(511, 424);
             this.lblTwoThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoThree.Name = "lblTwoThree";
             this.lblTwoThree.Size = new System.Drawing.Size(190, 190);
@@ -251,7 +235,7 @@ namespace TwentyFoutyEight
             this.lblTwoOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblTwoOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTwoOne.Location = new System.Drawing.Point(80, 389);
+            this.lblTwoOne.Location = new System.Drawing.Point(80, 424);
             this.lblTwoOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoOne.Name = "lblTwoOne";
             this.lblTwoOne.Size = new System.Drawing.Size(190, 190);
@@ -263,7 +247,7 @@ namespace TwentyFoutyEight
             this.lblTwoTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblTwoTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTwoTwo.Location = new System.Drawing.Point(296, 389);
+            this.lblTwoTwo.Location = new System.Drawing.Point(296, 424);
             this.lblTwoTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoTwo.Name = "lblTwoTwo";
             this.lblTwoTwo.Size = new System.Drawing.Size(190, 190);
@@ -275,7 +259,7 @@ namespace TwentyFoutyEight
             this.lblFourFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblFourFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFourFour.Location = new System.Drawing.Point(722, 819);
+            this.lblFourFour.Location = new System.Drawing.Point(722, 854);
             this.lblFourFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourFour.Name = "lblFourFour";
             this.lblFourFour.Size = new System.Drawing.Size(190, 190);
@@ -287,7 +271,7 @@ namespace TwentyFoutyEight
             this.lblFourThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblFourThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFourThree.Location = new System.Drawing.Point(511, 819);
+            this.lblFourThree.Location = new System.Drawing.Point(511, 854);
             this.lblFourThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourThree.Name = "lblFourThree";
             this.lblFourThree.Size = new System.Drawing.Size(190, 190);
@@ -299,7 +283,7 @@ namespace TwentyFoutyEight
             this.lblFourTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblFourTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFourTwo.Location = new System.Drawing.Point(296, 819);
+            this.lblFourTwo.Location = new System.Drawing.Point(296, 854);
             this.lblFourTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourTwo.Name = "lblFourTwo";
             this.lblFourTwo.Size = new System.Drawing.Size(190, 190);
@@ -311,7 +295,7 @@ namespace TwentyFoutyEight
             this.lblFourOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblFourOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFourOne.Location = new System.Drawing.Point(80, 819);
+            this.lblFourOne.Location = new System.Drawing.Point(80, 854);
             this.lblFourOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourOne.Name = "lblFourOne";
             this.lblFourOne.Size = new System.Drawing.Size(190, 190);
@@ -323,7 +307,7 @@ namespace TwentyFoutyEight
             this.lblThreeFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblThreeFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThreeFour.Location = new System.Drawing.Point(722, 604);
+            this.lblThreeFour.Location = new System.Drawing.Point(722, 639);
             this.lblThreeFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeFour.Name = "lblThreeFour";
             this.lblThreeFour.Size = new System.Drawing.Size(190, 190);
@@ -335,7 +319,7 @@ namespace TwentyFoutyEight
             this.lblThreeTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblThreeTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThreeTwo.Location = new System.Drawing.Point(296, 604);
+            this.lblThreeTwo.Location = new System.Drawing.Point(296, 639);
             this.lblThreeTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeTwo.Name = "lblThreeTwo";
             this.lblThreeTwo.Size = new System.Drawing.Size(190, 190);
@@ -347,7 +331,7 @@ namespace TwentyFoutyEight
             this.lblThreeThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblThreeThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThreeThree.Location = new System.Drawing.Point(511, 604);
+            this.lblThreeThree.Location = new System.Drawing.Point(511, 639);
             this.lblThreeThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeThree.Name = "lblThreeThree";
             this.lblThreeThree.Size = new System.Drawing.Size(190, 190);
@@ -359,7 +343,7 @@ namespace TwentyFoutyEight
             this.lblThreeOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblThreeOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThreeOne.Location = new System.Drawing.Point(80, 604);
+            this.lblThreeOne.Location = new System.Drawing.Point(80, 639);
             this.lblThreeOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeOne.Name = "lblThreeOne";
             this.lblThreeOne.Size = new System.Drawing.Size(190, 190);
@@ -368,15 +352,56 @@ namespace TwentyFoutyEight
             // 
             // labelScore
             // 
-            this.labelScore.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.labelScore.Font = new System.Drawing.Font("Clear Sans", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore.Location = new System.Drawing.Point(751, 55);
+            this.labelScore.Font = new System.Drawing.Font("Clear Sans", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.ForeColor = System.Drawing.Color.White;
+            this.labelScore.Location = new System.Drawing.Point(650, 15);
             this.labelScore.Margin = new System.Windows.Forms.Padding(4);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(140, 68);
+            this.labelScore.Size = new System.Drawing.Size(140, 65);
             this.labelScore.TabIndex = 45;
-            this.labelScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelScore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // lblHighScore
+            // 
+            this.lblHighScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblHighScore.AutoSize = true;
+            this.lblHighScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.lblHighScore.Font = new System.Drawing.Font("Clear Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighScore.ForeColor = System.Drawing.Color.White;
+            this.lblHighScore.Location = new System.Drawing.Point(811, 15);
+            this.lblHighScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHighScore.Name = "lblHighScore";
+            this.lblHighScore.Size = new System.Drawing.Size(113, 28);
+            this.lblHighScore.TabIndex = 46;
+            this.lblHighScore.Text = "High Score";
+            // 
+            // labelHighScore
+            // 
+            this.labelHighScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelHighScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.labelHighScore.Font = new System.Drawing.Font("Clear Sans", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHighScore.ForeColor = System.Drawing.Color.White;
+            this.labelHighScore.Location = new System.Drawing.Point(798, 15);
+            this.labelHighScore.Margin = new System.Windows.Forms.Padding(4);
+            this.labelHighScore.Name = "labelHighScore";
+            this.labelHighScore.Size = new System.Drawing.Size(140, 65);
+            this.labelHighScore.TabIndex = 47;
+            this.labelHighScore.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // lblGameName
+            // 
+            this.lblGameName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGameName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
+            this.lblGameName.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
+            this.lblGameName.Location = new System.Drawing.Point(12, 21);
+            this.lblGameName.Name = "lblGameName";
+            this.lblGameName.Size = new System.Drawing.Size(384, 127);
+            this.lblGameName.TabIndex = 48;
+            this.lblGameName.Text = "2048";
+            this.lblGameName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -384,7 +409,11 @@ namespace TwentyFoutyEight
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(991, 1153);
+            this.ClientSize = new System.Drawing.Size(991, 1222);
+            this.Controls.Add(this.lblGameName);
+            this.Controls.Add(this.lblHighScore);
+            this.Controls.Add(this.labelHighScore);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.lblFourFour);
             this.Controls.Add(this.lblFourThree);
@@ -407,9 +436,6 @@ namespace TwentyFoutyEight
             this.Controls.Add(this.btnShiftUp);
             this.Controls.Add(this.btnShiftRight);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -428,8 +454,6 @@ namespace TwentyFoutyEight
 
         #endregion
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnShiftRight;
         private System.Windows.Forms.Button btnShiftUp;
@@ -454,6 +478,9 @@ namespace TwentyFoutyEight
         private System.Windows.Forms.Label lblThreeThree;
         private System.Windows.Forms.Label lblThreeOne;
         private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.Label lblHighScore;
+        private System.Windows.Forms.Label labelHighScore;
+        private System.Windows.Forms.Label lblGameName;
     }
 }
 
