@@ -34,41 +34,10 @@ namespace TwentyFoutyEight
             _updateScore();
         }
 
-
-        private void btnShiftRight_Click(object sender, EventArgs e)
-        {
-            _shiftLogic.ShiftBoardRight(_gameBoard);
-            _updateBoard();
-            _updateScore();
-        }
-
-        private void btnShiftUp_Click(object sender, EventArgs e)
-        {
-            _shiftLogic.ShiftBoardUp(_gameBoard);
-            _updateBoard();
-            _updateScore();
-        }
-
-        private void btnShiftLeft_Click(object sender, EventArgs e)
-        {
-            _shiftLogic.ShiftBoardLeft(_gameBoard);
-            _updateBoard();
-            _updateScore();
-        }
-
-        private void btnShiftDown_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            btnShiftLeft_Click(sender, e);
-        }
-
         private void _updateScore()
         {
             labelScore.Text = _shiftLogic.Score.ToString();
+            labelHighScore.Text = _shiftLogic.Score.ToString();
         }
 
         // Updates the color, font, and font color according to the value in _gameBoard[,].
@@ -1384,6 +1353,53 @@ namespace TwentyFoutyEight
                 lblFourFour.Text = "";
             }
             _updateTileColor();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.A || e.KeyData == Keys.Left)
+            {
+                _shiftLogic.ShiftBoardLeft(_gameBoard);
+                _updateBoard();
+                _updateScore();
+
+            }
+            if (e.KeyData == Keys.D || e.KeyData == Keys.Right)
+            {
+                _shiftLogic.ShiftBoardRight(_gameBoard);
+                _updateBoard();
+                _updateScore();
+            }
+            if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
+            {
+                _shiftLogic.ShiftBoardUp(_gameBoard);
+                _updateBoard();
+                _updateScore();
+            }
+            if (e.KeyData == Keys.S || e.KeyData == Keys.Down)
+            {
+                _shiftLogic.ShiftBoardDown(_gameBoard);
+                _updateBoard();
+                _updateScore();
+            }
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void button1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            var keys = new[] { Keys.Left, Keys.Right, Keys.Up, Keys.Down };
+            if (keys.Contains(e.KeyData))
+                e.IsInputKey = true;
         }
     }
 }

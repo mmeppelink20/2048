@@ -31,13 +31,6 @@ namespace TwentyFoutyEight
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblScore = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnShiftRight = new System.Windows.Forms.Button();
-            this.btnShiftUp = new System.Windows.Forms.Button();
-            this.btnShiftDown = new System.Windows.Forms.Button();
-            this.btnShiftLeft = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblOneOne = new System.Windows.Forms.Label();
             this.lblOneTwo = new System.Windows.Forms.Label();
             this.lblOneThree = new System.Windows.Forms.Label();
@@ -58,6 +51,10 @@ namespace TwentyFoutyEight
             this.lblHighScore = new System.Windows.Forms.Label();
             this.labelHighScore = new System.Windows.Forms.Label();
             this.lblGameName = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblInstructions = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -69,94 +66,12 @@ namespace TwentyFoutyEight
             this.lblScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblScore.Font = new System.Drawing.Font("Clear Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(686, 15);
+            this.lblScore.Location = new System.Drawing.Point(688, 15);
             this.lblScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(65, 28);
             this.lblScore.TabIndex = 17;
             this.lblScore.Text = "Score";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(595, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 41);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "♻️";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Form1_Load);
-            // 
-            // btnShiftRight
-            // 
-            this.btnShiftRight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnShiftRight.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftRight.Location = new System.Drawing.Point(786, 1077);
-            this.btnShiftRight.Name = "btnShiftRight";
-            this.btnShiftRight.Size = new System.Drawing.Size(35, 35);
-            this.btnShiftRight.TabIndex = 22;
-            this.btnShiftRight.Text = "→";
-            this.btnShiftRight.UseVisualStyleBackColor = false;
-            this.btnShiftRight.Click += new System.EventHandler(this.btnShiftRight_Click);
-            // 
-            // btnShiftUp
-            // 
-            this.btnShiftUp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnShiftUp.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftUp.Location = new System.Drawing.Point(827, 1077);
-            this.btnShiftUp.Name = "btnShiftUp";
-            this.btnShiftUp.Size = new System.Drawing.Size(35, 35);
-            this.btnShiftUp.TabIndex = 24;
-            this.btnShiftUp.Text = "↑";
-            this.btnShiftUp.UseVisualStyleBackColor = false;
-            this.btnShiftUp.Click += new System.EventHandler(this.btnShiftUp_Click);
-            // 
-            // btnShiftDown
-            // 
-            this.btnShiftDown.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnShiftDown.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftDown.Location = new System.Drawing.Point(868, 1077);
-            this.btnShiftDown.Name = "btnShiftDown";
-            this.btnShiftDown.Size = new System.Drawing.Size(35, 35);
-            this.btnShiftDown.TabIndex = 25;
-            this.btnShiftDown.Text = "↓";
-            this.btnShiftDown.UseVisualStyleBackColor = false;
-            this.btnShiftDown.Click += new System.EventHandler(this.btnShiftDown_Click);
-            // 
-            // btnShiftLeft
-            // 
-            this.btnShiftLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnShiftLeft.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnShiftLeft.Location = new System.Drawing.Point(745, 1077);
-            this.btnShiftLeft.Name = "btnShiftLeft";
-            this.btnShiftLeft.Size = new System.Drawing.Size(35, 35);
-            this.btnShiftLeft.TabIndex = 26;
-            this.btnShiftLeft.Text = "←";
-            this.btnShiftLeft.UseVisualStyleBackColor = false;
-            this.btnShiftLeft.Click += new System.EventHandler(this.btnShiftLeft_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 184);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(882, 887);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, -6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(994, 1231);
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
             // 
             // lblOneOne
             // 
@@ -370,7 +285,7 @@ namespace TwentyFoutyEight
             this.lblHighScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
             this.lblHighScore.Font = new System.Drawing.Font("Clear Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighScore.ForeColor = System.Drawing.Color.White;
-            this.lblHighScore.Location = new System.Drawing.Point(811, 15);
+            this.lblHighScore.Location = new System.Drawing.Point(808, 15);
             this.lblHighScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHighScore.Name = "lblHighScore";
             this.lblHighScore.Size = new System.Drawing.Size(113, 28);
@@ -381,7 +296,7 @@ namespace TwentyFoutyEight
             // 
             this.labelHighScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelHighScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.labelHighScore.Font = new System.Drawing.Font("Clear Sans", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHighScore.Font = new System.Drawing.Font("Clear Sans", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHighScore.ForeColor = System.Drawing.Color.White;
             this.labelHighScore.Location = new System.Drawing.Point(798, 15);
             this.labelHighScore.Margin = new System.Windows.Forms.Padding(4);
@@ -396,12 +311,64 @@ namespace TwentyFoutyEight
             this.lblGameName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
             this.lblGameName.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
-            this.lblGameName.Location = new System.Drawing.Point(12, 21);
+            this.lblGameName.Location = new System.Drawing.Point(12, 54);
             this.lblGameName.Name = "lblGameName";
             this.lblGameName.Size = new System.Drawing.Size(384, 127);
             this.lblGameName.TabIndex = 48;
             this.lblGameName.Text = "2048";
             this.lblGameName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
+            this.button1.BackgroundImage = global::finalproject.Properties.Resources.restartIcon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
+            this.button1.Location = new System.Drawing.Point(863, 108);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(61, 60);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Form1_Load);
+            this.button1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.button1_PreviewKeyDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.pictureBox1.Location = new System.Drawing.Point(56, 184);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(882, 887);
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
+            this.pictureBox2.Location = new System.Drawing.Point(0, -6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(994, 1231);
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblInstructions
+            // 
+            this.lblInstructions.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblInstructions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
+            this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
+            this.lblInstructions.Location = new System.Drawing.Point(423, 1074);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(525, 127);
+            this.lblInstructions.TabIndex = 49;
+            this.lblInstructions.Text = "Use the arrow keys or WASD to get to 2048 :)";
+            this.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1
             // 
@@ -410,6 +377,7 @@ namespace TwentyFoutyEight
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(991, 1222);
+            this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.lblGameName);
             this.Controls.Add(this.lblHighScore);
             this.Controls.Add(this.labelHighScore);
@@ -431,19 +399,17 @@ namespace TwentyFoutyEight
             this.Controls.Add(this.lblOneThree);
             this.Controls.Add(this.lblOneTwo);
             this.Controls.Add(this.lblOneOne);
-            this.Controls.Add(this.btnShiftLeft);
-            this.Controls.Add(this.btnShiftDown);
-            this.Controls.Add(this.btnShiftUp);
-            this.Controls.Add(this.btnShiftRight);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2048";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -455,12 +421,7 @@ namespace TwentyFoutyEight
         #endregion
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnShiftRight;
-        private System.Windows.Forms.Button btnShiftUp;
-        private System.Windows.Forms.Button btnShiftDown;
-        private System.Windows.Forms.Button btnShiftLeft;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblOneOne;
         private System.Windows.Forms.Label lblOneTwo;
         private System.Windows.Forms.Label lblOneThree;
@@ -481,6 +442,8 @@ namespace TwentyFoutyEight
         private System.Windows.Forms.Label lblHighScore;
         private System.Windows.Forms.Label labelHighScore;
         private System.Windows.Forms.Label lblGameName;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblInstructions;
     }
 }
 
