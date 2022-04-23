@@ -55,6 +55,8 @@ namespace TwentyFoutyEight
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblInstructions = new System.Windows.Forms.Label();
+            this.lblGameOver = new System.Windows.Forms.Label();
+            this.btnGameOver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -370,6 +372,38 @@ namespace TwentyFoutyEight
             this.lblInstructions.Text = "Use the arrow keys or WASD to get to 2048 :)";
             this.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // lblGameOver
+            // 
+            this.lblGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGameOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
+            this.lblGameOver.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.ForeColor = System.Drawing.Color.White;
+            this.lblGameOver.Location = new System.Drawing.Point(247, 527);
+            this.lblGameOver.Name = "lblGameOver";
+            this.lblGameOver.Size = new System.Drawing.Size(500, 200);
+            this.lblGameOver.TabIndex = 50;
+            this.lblGameOver.Text = "Game Over";
+            this.lblGameOver.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblGameOver.Visible = false;
+            // 
+            // btnGameOver
+            // 
+            this.btnGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGameOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
+            this.btnGameOver.BackgroundImage = global::finalproject.Properties.Resources.restartIcon;
+            this.btnGameOver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGameOver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameOver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
+            this.btnGameOver.Location = new System.Drawing.Point(469, 654);
+            this.btnGameOver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGameOver.Name = "btnGameOver";
+            this.btnGameOver.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnGameOver.Size = new System.Drawing.Size(60, 60);
+            this.btnGameOver.TabIndex = 51;
+            this.btnGameOver.UseVisualStyleBackColor = false;
+            this.btnGameOver.Click += new System.EventHandler(this.Form1_Load);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,6 +411,8 @@ namespace TwentyFoutyEight
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(991, 1222);
+            this.Controls.Add(this.btnGameOver);
+            this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.lblGameName);
             this.Controls.Add(this.lblHighScore);
@@ -410,7 +446,6 @@ namespace TwentyFoutyEight
             this.Text = "2048";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -444,6 +479,8 @@ namespace TwentyFoutyEight
         private System.Windows.Forms.Label lblGameName;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblInstructions;
+        private System.Windows.Forms.Label lblGameOver;
+        private System.Windows.Forms.Button btnGameOver;
     }
 }
 

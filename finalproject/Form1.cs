@@ -32,6 +32,8 @@ namespace TwentyFoutyEight
             _gameBoard = _shiftLogic.CreateNewGameBoard();
             _updateBoard();
             _updateScore();
+            lblGameOver.Visible = false;
+            btnGameOver.Visible = false;
         }
 
         private void _updateScore()
@@ -1362,6 +1364,11 @@ namespace TwentyFoutyEight
                 _shiftLogic.ShiftBoardLeft(_gameBoard);
                 _updateBoard();
                 _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                }
 
             }
             if (e.KeyData == Keys.D || e.KeyData == Keys.Right)
@@ -1369,31 +1376,36 @@ namespace TwentyFoutyEight
                 _shiftLogic.ShiftBoardRight(_gameBoard);
                 _updateBoard();
                 _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                }
             }
             if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
             {
                 _shiftLogic.ShiftBoardUp(_gameBoard);
                 _updateBoard();
                 _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                }
             }
             if (e.KeyData == Keys.S || e.KeyData == Keys.Down)
             {
                 _shiftLogic.ShiftBoardDown(_gameBoard);
                 _updateBoard();
                 _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                }
             }
         }
 
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
 
         private void button1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
