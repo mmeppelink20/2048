@@ -1,4 +1,7 @@
 ﻿// Matthew Meppelink
+// TODO: embed font into program
+//       data objects/accessors
+//       high score update and save
 
 using System;
 using System.Collections.Generic;
@@ -34,8 +37,72 @@ namespace TwentyFoutyEight
             _updateScore();
             lblGameOver.Visible = false;
             btnGameOver.Visible = false;
+            lblGameOverBorder.Visible = false;
         }
 
+        // controls
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.A || e.KeyData == Keys.Left)
+            {
+                _shiftLogic.ShiftBoardLeft(_gameBoard);
+                _updateBoard();
+                _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                    lblGameOverBorder.Visible = true;
+                }
+
+            }
+            if (e.KeyData == Keys.D || e.KeyData == Keys.Right)
+            {
+                _shiftLogic.ShiftBoardRight(_gameBoard);
+                _updateBoard();
+                _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                    lblGameOverBorder.Visible = true;
+                }
+            }
+            if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
+            {
+                _shiftLogic.ShiftBoardUp(_gameBoard);
+                _updateBoard();
+                _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                    lblGameOverBorder.Visible = true;
+                }
+            }
+            if (e.KeyData == Keys.S || e.KeyData == Keys.Down)
+            {
+                _shiftLogic.ShiftBoardDown(_gameBoard);
+                _updateBoard();
+                _updateScore();
+                if (_shiftLogic.CheckIfLost(_gameBoard))
+                {
+                    lblGameOver.Visible = true;
+                    btnGameOver.Visible = true;
+                    lblGameOverBorder.Visible = true;
+                }
+            }
+        }
+
+        // controls
+        private void button1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            var keys = new[] { Keys.Left, Keys.Right, Keys.Up, Keys.Down };
+            if (keys.Contains(e.KeyData))
+                e.IsInputKey = true;
+        }
+
+        // Updates the score
         private void _updateScore()
         {
             labelScore.Text = _shiftLogic.Score.ToString();
@@ -1355,63 +1422,6 @@ namespace TwentyFoutyEight
                 lblFourFour.Text = "";
             }
             _updateTileColor();
-        }
-
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.A || e.KeyData == Keys.Left)
-            {
-                _shiftLogic.ShiftBoardLeft(_gameBoard);
-                _updateBoard();
-                _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
-                {
-                    lblGameOver.Visible = true;
-                    btnGameOver.Visible = true;
-                }
-
-            }
-            if (e.KeyData == Keys.D || e.KeyData == Keys.Right)
-            {
-                _shiftLogic.ShiftBoardRight(_gameBoard);
-                _updateBoard();
-                _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
-                {
-                    lblGameOver.Visible = true;
-                    btnGameOver.Visible = true;
-                }
-            }
-            if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
-            {
-                _shiftLogic.ShiftBoardUp(_gameBoard);
-                _updateBoard();
-                _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
-                {
-                    lblGameOver.Visible = true;
-                    btnGameOver.Visible = true;
-                }
-            }
-            if (e.KeyData == Keys.S || e.KeyData == Keys.Down)
-            {
-                _shiftLogic.ShiftBoardDown(_gameBoard);
-                _updateBoard();
-                _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
-                {
-                    lblGameOver.Visible = true;
-                    btnGameOver.Visible = true;
-                }
-            }
-        }
-
-
-        private void button1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            var keys = new[] { Keys.Left, Keys.Right, Keys.Up, Keys.Down };
-            if (keys.Contains(e.KeyData))
-                e.IsInputKey = true;
         }
     }
 }

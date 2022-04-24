@@ -57,6 +57,7 @@ namespace TwentyFoutyEight
             this.lblInstructions = new System.Windows.Forms.Label();
             this.lblGameOver = new System.Windows.Forms.Label();
             this.btnGameOver = new System.Windows.Forms.Button();
+            this.lblGameOverBorder = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -404,6 +405,19 @@ namespace TwentyFoutyEight
             this.btnGameOver.UseVisualStyleBackColor = false;
             this.btnGameOver.Click += new System.EventHandler(this.Form1_Load);
             // 
+            // lblGameOverBorder
+            // 
+            this.lblGameOverBorder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblGameOverBorder.BackColor = System.Drawing.Color.Gray;
+            this.lblGameOverBorder.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOverBorder.ForeColor = System.Drawing.Color.White;
+            this.lblGameOverBorder.Location = new System.Drawing.Point(235, 518);
+            this.lblGameOverBorder.Name = "lblGameOverBorder";
+            this.lblGameOverBorder.Size = new System.Drawing.Size(524, 219);
+            this.lblGameOverBorder.TabIndex = 52;
+            this.lblGameOverBorder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblGameOverBorder.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -413,6 +427,7 @@ namespace TwentyFoutyEight
             this.ClientSize = new System.Drawing.Size(991, 1222);
             this.Controls.Add(this.btnGameOver);
             this.Controls.Add(this.lblGameOver);
+            this.Controls.Add(this.lblGameOverBorder);
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.lblGameName);
             this.Controls.Add(this.lblHighScore);
@@ -481,6 +496,7 @@ namespace TwentyFoutyEight
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.Label lblGameOver;
         private System.Windows.Forms.Button btnGameOver;
+        private System.Windows.Forms.Label lblGameOverBorder;
     }
 }
 
