@@ -7,3 +7,12 @@ C:\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInpu
 C:\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\bin\Debug\DataObjects.dll
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\bin\Debug\DataObjects.pdb
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\matth\Desktop\finalproject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

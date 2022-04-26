@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace DataAccessLayer
+namespace DataObjects
 {
-    public class Class1
+    public class AppData
     {
+        public static string DataPath;
     }
 }

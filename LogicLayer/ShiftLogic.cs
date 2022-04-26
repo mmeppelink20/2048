@@ -1,14 +1,14 @@
 ﻿// Matthew Meppelink
-
 using System;
+using DataObjects;
 
 namespace LogicLayer
 {
 
     public class ShiftLogic
     {
-        public int Score { get; set; }
 
+        public GameBoardData GameBoardData = new GameBoardData();
 
         public int[,] CreateNewGameBoard()
         {
@@ -20,7 +20,7 @@ namespace LogicLayer
                             {0, 0, 0, 0 },
                             };
 
-            Score = 0;
+            GameBoardData.Score = 0;
 
             _newNumber(gameBoard);
             _newNumber(gameBoard);
@@ -64,128 +64,9 @@ namespace LogicLayer
             }
         }
 
-
-
-
-        private int[,] _copyGameBoard(int[,] gameBoard) // creates a copy of the current gameboard to compare to the updated gameboard later.
-        {
-            int[,] startingGameBoard = new int[4, 4]
-                            {
-                            {0, 0, 0, 0 },
-                            {0, 0, 0, 0 },
-                            {0, 0, 0, 0 },
-                            {0, 0, 0, 0 },
-                            };
-
-            for (int i = 0; i < gameBoard.GetLength(0); i++)
-            {
-                for (int j = 0; j < gameBoard.GetLength(0); j++)
-                {
-                    startingGameBoard[i, j] = gameBoard[i, j];
-                }
-            }
-            return startingGameBoard;
-        }
-
-        private bool _newTile(int[,] startingGameBoard, int[,] currentGameBoard) // determines whether a new tile is needed or not
-        {
-            bool newTile = false;
-            for (int i = 0; i < currentGameBoard.GetLength(0); i++)
-            {
-                for (int j = 0; j < currentGameBoard.GetLength(0); j++)
-                {
-                    if (startingGameBoard[i, j] != currentGameBoard[i, j])
-                    {
-                        newTile = true;
-                    }
-                }
-            }
-
-            return newTile;
-        }
-
-        public bool CheckIfLost(int[,] gameBoard)
-        {
-            bool lost = false;
-            int count = 0;
-
-            int countRight = 0;
-            for (int i = 0; i < gameBoard.GetLength(0); i++) // check if any tiles can be shifted to the right
-            {
-                for (int j = gameBoard.GetLength(0) - 1; j > 0; j--)
-                {
-                    if (gameBoard[i, j - 1] == gameBoard[i, j] || gameBoard[i, j - 1] == 0)
-                    {
-                        countRight++;
-                    }
-                }
-            }
-            if (countRight == 0)
-            {
-                count++;
-            }
-
-
-            int countLeft = 0;
-            for (int i = 0; i < gameBoard.GetLength(0); i++) // check if any tiles can be shifted to the left
-            {
-                for (int j = 0; j < gameBoard.GetLength(0) - 1; j++)
-                {
-                    if (gameBoard[i, j + 1] == gameBoard[i, j] || gameBoard[i, j + 1] == 0)
-                    {
-                        countLeft++;
-                    }
-                }
-            }
-            if (countLeft == 0)
-            {
-                count++;
-            }
-
-
-            int countUp = 0;
-            for (int i = 0; i < gameBoard.GetLength(0) - 1; i++) // check if any tiles can be shifted up
-            {
-                for (int j = gameBoard.GetLength(0) - 1; j >= 0; j--)
-                {
-                    if (gameBoard[i + 1, j] == gameBoard[i, j] || gameBoard[i + 1, j] == 0)
-                    {
-                        countUp++;
-                    }
-                }
-            }
-            if (countUp == 0)
-            {
-                count++;
-            }
-
-            int countDown = 0;
-            for (int i = gameBoard.GetLength(0) - 1; i > 0; i--) // check if any tiles can be shifted down
-            {
-                for (int j = 0; j <= gameBoard.GetLength(0) - 1; j++)
-                {
-                    if (gameBoard[i - 1, j] == gameBoard[i, j] || gameBoard[i - 1, j] == 0)
-                    {
-                        countDown++;
-                    }
-                }
-            }
-            if(countDown == 0)
-            {
-                count++;
-            }
-
-            if(count == 4)
-            {
-                lost = true;
-            }
-
-            return lost;
-        }
-
         public int[,] ShiftBoardRight(int[,] gameBoard) // shifts the gameboard to the right
         {
-            int[,] startingGameBoard = _copyGameBoard(gameBoard);
+            int[,] startingGameBoard = GameBoardData.CopyGameBoard(gameBoard);
 
             for (int i = 0; i < gameBoard.GetLength(0); i++) // shift all the tiles to the right 
             {
@@ -211,7 +92,7 @@ namespace LogicLayer
                     {
                         gameBoard[i, j] += gameBoard[i, j - 1];
                         gameBoard[i, j - 1] = 0;
-                        Score += gameBoard[i, j];
+                        GameBoardData.Score += gameBoard[i, j];
                     }
                 }
             }
@@ -233,7 +114,7 @@ namespace LogicLayer
                 }
             }
 
-            if (_newTile(startingGameBoard, gameBoard)) // see if new tile needs to be added
+            if (GameBoardData.NewTile(startingGameBoard, gameBoard)) // see if new tile needs to be added
             {
                 _newNumber(gameBoard);
             }
@@ -243,8 +124,7 @@ namespace LogicLayer
 
         public int[,] ShiftBoardLeft(int[,] gameBoard) // shifts the gameboard to the left
         {
-            int[,] startingGameBoard = _copyGameBoard(gameBoard);
-
+            int[,] startingGameBoard = GameBoardData.CopyGameBoard(gameBoard);
 
             for (int i = 0; i < gameBoard.GetLength(0); i++)// shift all the tiles to the left
             {
@@ -269,7 +149,7 @@ namespace LogicLayer
                     {
                         gameBoard[i, j] += gameBoard[i, j + 1];
                         gameBoard[i, j + 1] = 0;
-                        Score += gameBoard[i, j];
+                        GameBoardData.Score += gameBoard[i, j];
                     }
                 }
             }
@@ -289,11 +169,10 @@ namespace LogicLayer
                 }
             }
 
-            if (_newTile(startingGameBoard, gameBoard))//see if new tile needs to be added
+            if (GameBoardData.NewTile(startingGameBoard, gameBoard))//see if new tile needs to be added
             {
                 _newNumber(gameBoard);
             }
-
 
 
             return gameBoard;
@@ -301,8 +180,7 @@ namespace LogicLayer
 
         public int[,] ShiftBoardUp(int[,] gameBoard) // shifts the gameboard up
         {
-            int[,] startingGameBoard = _copyGameBoard(gameBoard);
-            int startingScore = Score;
+            int[,] startingGameBoard = GameBoardData.CopyGameBoard(gameBoard);
 
             for (int count = 1; count <= 2; count++) // shift all the tiles up
             {
@@ -319,7 +197,6 @@ namespace LogicLayer
                 }
             }
 
-
             for (int i = 0; i < gameBoard.GetLength(0) - 1; i++) // combine adjacent like tiles up
             {
                 for (int j = gameBoard.GetLength(0) - 1; j >= 0; j--)
@@ -328,7 +205,7 @@ namespace LogicLayer
                     {
                         gameBoard[i, j] += gameBoard[i + 1, j];
                         gameBoard[i + 1, j] = 0;
-                        Score += gameBoard[i, j];
+                        GameBoardData.Score += gameBoard[i, j];
                     }
                 }
             }
@@ -348,7 +225,7 @@ namespace LogicLayer
                 }
             }
 
-            if (_newTile(startingGameBoard, gameBoard))//see if new tile needs to be added
+            if (GameBoardData.NewTile(startingGameBoard, gameBoard))//see if new tile needs to be added
             {
 
                 _newNumber(gameBoard);
@@ -360,8 +237,7 @@ namespace LogicLayer
 
         public int[,] ShiftBoardDown(int[,] gameBoard) // shifts the gameboard down
         {
-            int[,] startingGameBoard = _copyGameBoard(gameBoard);
-            int startingScore = Score;
+            int[,] startingGameBoard = GameBoardData.CopyGameBoard(gameBoard);
 
             for (int count = 1; count <= 2; count++) // shift all the tiles up
             {
@@ -386,7 +262,7 @@ namespace LogicLayer
                     {
                         gameBoard[i, j] += gameBoard[i - 1, j];
                         gameBoard[i - 1, j] = 0;
-                        Score += gameBoard[i, j];
+                        GameBoardData.Score += gameBoard[i, j];
                     }
                 }
             }
@@ -406,7 +282,7 @@ namespace LogicLayer
                 }
             }
 
-            if (_newTile(startingGameBoard, gameBoard))//see if new tile needs to be added
+            if (GameBoardData.NewTile(startingGameBoard, gameBoard))//see if new tile needs to be added
             {
                 _newNumber(gameBoard);
             }

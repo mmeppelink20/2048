@@ -1,13 +1,10 @@
 ﻿// Matthew Meppelink
-// TODO: embed font into program
-//       data objects/accessors
-//       high score update and save
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,25 +17,30 @@ namespace TwentyFoutyEight
 {
     public partial class Form1 : Form
     {
-        private int[,] _gameBoard = new int[3, 3];
-
-        private ShiftLogic _shiftLogic = new ShiftLogic();
 
         public Form1()
         {
             InitializeComponent();
         }
 
+        private int[,] _gameBoard;
+        private ShiftLogic _shiftLogic = new ShiftLogic();
+        private GameBoardData gameBoardData;
+        private Score _score = new Score();
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
             _gameBoard = _shiftLogic.CreateNewGameBoard();
+            gameBoardData = _shiftLogic.GameBoardData;
             _updateBoard();
             _updateScore();
             lblGameOver.Visible = false;
             btnGameOver.Visible = false;
             lblGameOverBorder.Visible = false;
+
         }
+
 
         // controls
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -48,7 +50,7 @@ namespace TwentyFoutyEight
                 _shiftLogic.ShiftBoardLeft(_gameBoard);
                 _updateBoard();
                 _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
+                if (gameBoardData.CheckIfLost(_gameBoard))
                 {
                     lblGameOver.Visible = true;
                     btnGameOver.Visible = true;
@@ -61,7 +63,7 @@ namespace TwentyFoutyEight
                 _shiftLogic.ShiftBoardRight(_gameBoard);
                 _updateBoard();
                 _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
+                if (gameBoardData.CheckIfLost(_gameBoard))
                 {
                     lblGameOver.Visible = true;
                     btnGameOver.Visible = true;
@@ -73,7 +75,7 @@ namespace TwentyFoutyEight
                 _shiftLogic.ShiftBoardUp(_gameBoard);
                 _updateBoard();
                 _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
+                if (gameBoardData.CheckIfLost(_gameBoard))
                 {
                     lblGameOver.Visible = true;
                     btnGameOver.Visible = true;
@@ -85,12 +87,20 @@ namespace TwentyFoutyEight
                 _shiftLogic.ShiftBoardDown(_gameBoard);
                 _updateBoard();
                 _updateScore();
-                if (_shiftLogic.CheckIfLost(_gameBoard))
+                if (gameBoardData.CheckIfLost(_gameBoard))
                 {
                     lblGameOver.Visible = true;
                     btnGameOver.Visible = true;
                     lblGameOverBorder.Visible = true;
                 }
+            }
+            try
+            {
+                _score.SavePlayerScore(gameBoardData.Score);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n\n" + ex.InnerException.Message);
             }
         }
 
@@ -105,8 +115,35 @@ namespace TwentyFoutyEight
         // Updates the score
         private void _updateScore()
         {
-            labelScore.Text = _shiftLogic.Score.ToString();
-            labelHighScore.Text = _shiftLogic.Score.ToString();
+            labelScore.Text = gameBoardData.Score.ToString();
+            if (gameBoardData.Score > _score.RestoreSavedScore())
+            {
+                labelHighScore.Text = gameBoardData.Score.ToString();
+            }
+            else
+            {
+                try
+                {
+                    labelHighScore.Text = _score.RestoreSavedScore().ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\n\n" + ex.InnerException.Message);
+                }
+            }
+        }
+
+        private void btnClearHighScore_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _score.SetScoreZero(gameBoardData.Score, 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n\n" + ex.InnerException.Message);
+            }
+            _updateScore();
         }
 
         // Updates the color, font, and font color according to the value in _gameBoard[,].
@@ -132,9 +169,9 @@ namespace TwentyFoutyEight
             Color _textColorWhite = Color.White;
             Color _textColorBlack = Color.Black;
 
-            Font _fontTen = new Font("Clear Sans", 48, FontStyle.Bold);
-            Font _fontHundred = new Font("Clear Sans", 44, FontStyle.Bold);
-            Font _fontThousand = new Font("Clear Sans", 33, FontStyle.Bold);
+            Font _fontTen = new Font("Microsoft YaHei UI", 48, FontStyle.Bold);
+            Font _fontHundred = new Font("Microsoft YaHei UI", 44, FontStyle.Bold);
+            Font _fontThousand = new Font("Microsoft YaHei UI", 33, FontStyle.Bold);
 
             // 1, 1
             int tileValue = _gameBoard[0, 0];
@@ -1423,5 +1460,7 @@ namespace TwentyFoutyEight
             }
             _updateTileColor();
         }
+
+
     }
 }

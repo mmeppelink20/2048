@@ -4,3 +4,9 @@ C:\finalproject\DataObjects\obj\Debug\DataObjects.csproj.AssemblyReference.cache
 C:\finalproject\DataObjects\obj\Debug\DataObjects.csproj.CoreCompileInputs.cache
 C:\finalproject\DataObjects\obj\Debug\DataObjects.dll
 C:\finalproject\DataObjects\obj\Debug\DataObjects.pdb
+C:\Users\matth\Desktop\finalproject\DataObjects\bin\Debug\DataObjects.dll
+C:\Users\matth\Desktop\finalproject\DataObjects\bin\Debug\DataObjects.pdb
+C:\Users\matth\Desktop\finalproject\DataObjects\obj\Debug\DataObjects.csproj.AssemblyReference.cache
+C:\Users\matth\Desktop\finalproject\DataObjects\obj\Debug\DataObjects.csproj.CoreCompileInputs.cache
+C:\Users\matth\Desktop\finalproject\DataObjects\obj\Debug\DataObjects.dll
+C:\Users\matth\Desktop\finalproject\DataObjects\obj\Debug\DataObjects.pdb

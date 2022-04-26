@@ -58,6 +58,7 @@ namespace TwentyFoutyEight
             this.lblGameOver = new System.Windows.Forms.Label();
             this.btnGameOver = new System.Windows.Forms.Button();
             this.lblGameOverBorder = new System.Windows.Forms.Label();
+            this.btnClearHighScore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -67,20 +68,21 @@ namespace TwentyFoutyEight
             this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblScore.Font = new System.Drawing.Font("Clear Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(688, 15);
+            this.lblScore.Location = new System.Drawing.Point(687, 16);
             this.lblScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(65, 28);
+            this.lblScore.Size = new System.Drawing.Size(67, 27);
             this.lblScore.TabIndex = 17;
             this.lblScore.Text = "Score";
+            this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblOneOne
             // 
             this.lblOneOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblOneOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneOne.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneOne.Location = new System.Drawing.Point(80, 209);
             this.lblOneOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneOne.Name = "lblOneOne";
@@ -92,7 +94,7 @@ namespace TwentyFoutyEight
             // 
             this.lblOneTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblOneTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneTwo.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneTwo.Location = new System.Drawing.Point(296, 209);
             this.lblOneTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneTwo.Name = "lblOneTwo";
@@ -104,7 +106,7 @@ namespace TwentyFoutyEight
             // 
             this.lblOneThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblOneThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneThree.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneThree.Location = new System.Drawing.Point(511, 209);
             this.lblOneThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneThree.Name = "lblOneThree";
@@ -116,7 +118,7 @@ namespace TwentyFoutyEight
             // 
             this.lblOneFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOneFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblOneFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOneFour.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOneFour.Location = new System.Drawing.Point(722, 209);
             this.lblOneFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblOneFour.Name = "lblOneFour";
@@ -128,7 +130,7 @@ namespace TwentyFoutyEight
             // 
             this.lblTwoFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblTwoFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoFour.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoFour.Location = new System.Drawing.Point(722, 424);
             this.lblTwoFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoFour.Name = "lblTwoFour";
@@ -140,7 +142,7 @@ namespace TwentyFoutyEight
             // 
             this.lblTwoThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblTwoThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoThree.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoThree.Location = new System.Drawing.Point(511, 424);
             this.lblTwoThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoThree.Name = "lblTwoThree";
@@ -152,7 +154,7 @@ namespace TwentyFoutyEight
             // 
             this.lblTwoOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblTwoOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoOne.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoOne.Location = new System.Drawing.Point(80, 424);
             this.lblTwoOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoOne.Name = "lblTwoOne";
@@ -164,7 +166,7 @@ namespace TwentyFoutyEight
             // 
             this.lblTwoTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTwoTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblTwoTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwoTwo.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTwoTwo.Location = new System.Drawing.Point(296, 424);
             this.lblTwoTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblTwoTwo.Name = "lblTwoTwo";
@@ -176,7 +178,7 @@ namespace TwentyFoutyEight
             // 
             this.lblFourFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblFourFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourFour.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourFour.Location = new System.Drawing.Point(722, 854);
             this.lblFourFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourFour.Name = "lblFourFour";
@@ -188,7 +190,7 @@ namespace TwentyFoutyEight
             // 
             this.lblFourThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblFourThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourThree.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourThree.Location = new System.Drawing.Point(511, 854);
             this.lblFourThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourThree.Name = "lblFourThree";
@@ -200,7 +202,7 @@ namespace TwentyFoutyEight
             // 
             this.lblFourTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblFourTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourTwo.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourTwo.Location = new System.Drawing.Point(296, 854);
             this.lblFourTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourTwo.Name = "lblFourTwo";
@@ -212,7 +214,7 @@ namespace TwentyFoutyEight
             // 
             this.lblFourOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFourOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblFourOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFourOne.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFourOne.Location = new System.Drawing.Point(80, 854);
             this.lblFourOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblFourOne.Name = "lblFourOne";
@@ -224,7 +226,7 @@ namespace TwentyFoutyEight
             // 
             this.lblThreeFour.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblThreeFour.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeFour.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeFour.Location = new System.Drawing.Point(722, 639);
             this.lblThreeFour.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeFour.Name = "lblThreeFour";
@@ -236,7 +238,7 @@ namespace TwentyFoutyEight
             // 
             this.lblThreeTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblThreeTwo.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeTwo.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeTwo.Location = new System.Drawing.Point(296, 639);
             this.lblThreeTwo.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeTwo.Name = "lblThreeTwo";
@@ -248,7 +250,7 @@ namespace TwentyFoutyEight
             // 
             this.lblThreeThree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblThreeThree.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeThree.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeThree.Location = new System.Drawing.Point(511, 639);
             this.lblThreeThree.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeThree.Name = "lblThreeThree";
@@ -260,7 +262,7 @@ namespace TwentyFoutyEight
             // 
             this.lblThreeOne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThreeOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblThreeOne.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThreeOne.Font = new System.Drawing.Font("Mistral", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThreeOne.Location = new System.Drawing.Point(80, 639);
             this.lblThreeOne.Margin = new System.Windows.Forms.Padding(4);
             this.lblThreeOne.Name = "lblThreeOne";
@@ -272,7 +274,7 @@ namespace TwentyFoutyEight
             // 
             this.labelScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.labelScore.Font = new System.Drawing.Font("Clear Sans", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.labelScore.ForeColor = System.Drawing.Color.White;
             this.labelScore.Location = new System.Drawing.Point(650, 15);
             this.labelScore.Margin = new System.Windows.Forms.Padding(4);
@@ -286,20 +288,21 @@ namespace TwentyFoutyEight
             this.lblHighScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHighScore.AutoSize = true;
             this.lblHighScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.lblHighScore.Font = new System.Drawing.Font("Clear Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighScore.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighScore.ForeColor = System.Drawing.Color.White;
-            this.lblHighScore.Location = new System.Drawing.Point(808, 15);
+            this.lblHighScore.Location = new System.Drawing.Point(807, 18);
             this.lblHighScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHighScore.Name = "lblHighScore";
-            this.lblHighScore.Size = new System.Drawing.Size(113, 28);
+            this.lblHighScore.Size = new System.Drawing.Size(117, 26);
             this.lblHighScore.TabIndex = 46;
             this.lblHighScore.Text = "High Score";
+            this.lblHighScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelHighScore
             // 
             this.labelHighScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelHighScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
-            this.labelHighScore.Font = new System.Drawing.Font("Clear Sans", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHighScore.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.labelHighScore.ForeColor = System.Drawing.Color.White;
             this.labelHighScore.Location = new System.Drawing.Point(798, 15);
             this.labelHighScore.Margin = new System.Windows.Forms.Padding(4);
@@ -312,14 +315,14 @@ namespace TwentyFoutyEight
             // 
             this.lblGameName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGameName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
-            this.lblGameName.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameName.Font = new System.Drawing.Font("Microsoft YaHei UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
-            this.lblGameName.Location = new System.Drawing.Point(12, 54);
+            this.lblGameName.Location = new System.Drawing.Point(29, 38);
             this.lblGameName.Name = "lblGameName";
-            this.lblGameName.Size = new System.Drawing.Size(384, 127);
+            this.lblGameName.Size = new System.Drawing.Size(420, 143);
             this.lblGameName.TabIndex = 48;
             this.lblGameName.Text = "2048";
-            this.lblGameName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGameName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
@@ -364,11 +367,11 @@ namespace TwentyFoutyEight
             // 
             this.lblInstructions.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblInstructions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(239)))));
-            this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstructions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
-            this.lblInstructions.Location = new System.Drawing.Point(423, 1074);
+            this.lblInstructions.Location = new System.Drawing.Point(364, 1074);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(525, 127);
+            this.lblInstructions.Size = new System.Drawing.Size(584, 127);
             this.lblInstructions.TabIndex = 49;
             this.lblInstructions.Text = "Use the arrow keys or WASD to get to 2048 :)";
             this.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -377,7 +380,7 @@ namespace TwentyFoutyEight
             // 
             this.lblGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGameOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
-            this.lblGameOver.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft YaHei UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameOver.ForeColor = System.Drawing.Color.White;
             this.lblGameOver.Location = new System.Drawing.Point(247, 527);
             this.lblGameOver.Name = "lblGameOver";
@@ -409,7 +412,7 @@ namespace TwentyFoutyEight
             // 
             this.lblGameOverBorder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGameOverBorder.BackColor = System.Drawing.Color.Gray;
-            this.lblGameOverBorder.Font = new System.Drawing.Font("Clear Sans", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOverBorder.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameOverBorder.ForeColor = System.Drawing.Color.White;
             this.lblGameOverBorder.Location = new System.Drawing.Point(235, 518);
             this.lblGameOverBorder.Name = "lblGameOverBorder";
@@ -418,6 +421,25 @@ namespace TwentyFoutyEight
             this.lblGameOverBorder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblGameOverBorder.Visible = false;
             // 
+            // btnClearHighScore
+            // 
+            this.btnClearHighScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnClearHighScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.btnClearHighScore.BackgroundImage = global::finalproject.Properties.Resources.restartIcon;
+            this.btnClearHighScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClearHighScore.FlatAppearance.BorderSize = 0;
+            this.btnClearHighScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearHighScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(170)))), ((int)(((byte)(157)))));
+            this.btnClearHighScore.Location = new System.Drawing.Point(911, 55);
+            this.btnClearHighScore.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearHighScore.Name = "btnClearHighScore";
+            this.btnClearHighScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnClearHighScore.Size = new System.Drawing.Size(24, 21);
+            this.btnClearHighScore.TabIndex = 53;
+            this.btnClearHighScore.UseVisualStyleBackColor = false;
+            this.btnClearHighScore.Click += new System.EventHandler(this.btnClearHighScore_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -425,6 +447,7 @@ namespace TwentyFoutyEight
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(991, 1222);
+            this.Controls.Add(this.btnClearHighScore);
             this.Controls.Add(this.btnGameOver);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblGameOverBorder);
@@ -497,6 +520,7 @@ namespace TwentyFoutyEight
         private System.Windows.Forms.Label lblGameOver;
         private System.Windows.Forms.Button btnGameOver;
         private System.Windows.Forms.Label lblGameOverBorder;
+        private System.Windows.Forms.Button btnClearHighScore;
     }
 }
 
