@@ -31,3 +31,14 @@ C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CoreC
 C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
 C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.dll
 C:\Users\matth\Desktop\finalproject\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\matth\Desktop\2048\LogicLayer\bin\Debug\LogicLayer.dll
+C:\Users\matth\Desktop\2048\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\Users\matth\Desktop\2048\LogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\matth\Desktop\2048\LogicLayer\bin\Debug\DataObjects.dll
+C:\Users\matth\Desktop\2048\LogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\matth\Desktop\2048\LogicLayer\bin\Debug\DataObjects.pdb
+C:\Users\matth\Desktop\2048\LogicLayer\obj\Debug\LogicLayer.csproj.AssemblyReference.cache
+C:\Users\matth\Desktop\2048\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\matth\Desktop\2048\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
+C:\Users\matth\Desktop\2048\LogicLayer\obj\Debug\LogicLayer.dll
+C:\Users\matth\Desktop\2048\LogicLayer\obj\Debug\LogicLayer.pdb

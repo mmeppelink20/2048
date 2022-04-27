@@ -380,7 +380,7 @@ namespace TwentyFoutyEight
             // 
             this.lblGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGameOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(110)))), ((int)(((byte)(101)))));
-            this.lblGameOver.Font = new System.Drawing.Font("Microsoft YaHei UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft YaHei UI", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameOver.ForeColor = System.Drawing.Color.White;
             this.lblGameOver.Location = new System.Drawing.Point(247, 527);
             this.lblGameOver.Name = "lblGameOver";
